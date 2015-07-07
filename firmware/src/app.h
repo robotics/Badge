@@ -111,7 +111,9 @@ typedef struct
 
 } APP_DATA;
 
-extern SYSTEM_OBJECTS sysObj;
+//extern SYSTEM_OBJECTS sysObj;
+
+#define MY_BUFFER_SIZE 3*2400
 
 
 // *****************************************************************************

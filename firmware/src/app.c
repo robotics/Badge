@@ -79,6 +79,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 APP_DATA    appData;
 SYS_STATUS  i2sStatus;
 DRV_HANDLE i2sHandle;
+MY_APP_OBJ myAppObj;
+uint8_t myBuffer[MY_BUFFER_SIZE];
+DRV_I2S_BUFFER_HANDLE bufferHandle;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -88,6 +91,25 @@ DRV_HANDLE i2sHandle;
 
 /* TODO:  Add any necessary callback funtions.
 */
+void APP_I2SBufferEventHandler(DRV_I2S_BUFFER_EVENT event, DRV_I2S_BUFFER_HANDLE bufferHandle, uintptr_t contextHandle){
+        // contextHandle points to myAppObj.
+
+        switch(event)
+        {
+            case DRV_I2S_BUFFER_EVENT_COMPLETE:
+
+                // This means the data was transferred.
+                break;
+
+            case DRV_I2S_BUFFER_EVENT_ERROR:
+
+                // Error handling here.
+                break;
+
+            default:
+                break;
+        }
+    }
 
 // *****************************************************************************
 // *****************************************************************************
@@ -97,6 +119,7 @@ DRV_HANDLE i2sHandle;
 
 /* TODO:  Add any necessary local functions.
 */
+
 
 
 // *****************************************************************************
@@ -143,35 +166,36 @@ void APP_Tasks ( void )
     {
         /* Application's initial state. */
         case APP_STATE_INIT:
-            DRV_TMR0_Start();
-            //Opening I2S device driver
-            i2sStatus = DRV_I2S_Status(sysObj.drvI2S0);
-            if (SYS_STATUS_READY == i2sStatus){
-                i2sHandle = DRV_I2S_Open(DRV_I2S_INDEX_0, DRV_IO_INTENT_EXCLUSIVE);
-                if (DRV_HANDLE_INVALID == i2sHandle){
-                    // Unable to open the driver
-                    // May be the driver is not initialized or the initialization
-                    // is not complete.
-                }
-            }
-            PLIB_PORTS_DirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_B,PORTS_BIT_POS_0);
-            PLIB_PORTS_PinWrite (PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_0, 1);
-            appData.state=APP_STATE_EVENT;
-            break;
+		DRV_TMR0_Start();
+		//Opening I2S device driver
+		i2sStatus = DRV_I2S_Status(sysObj.drvI2S0);
+		if (SYS_STATUS_READY == i2sStatus){
+		    
+			i2sHandle = DRV_I2S_Open(DRV_I2S_INDEX_0, DRV_IO_INTENT_READ);
+			if (DRV_HANDLE_INVALID == i2sHandle){
+				// Unable to open the driver
+				// May be the driver is not initialized or the initialization
+				// is not complete.
+			
+			}
+		}
+		DRV_I2S_BufferEventHandlerSet(i2sHandle, APP_I2SBufferEventHandler, (uintptr_t)&myAppObj);
+
+		DRV_I2S_BufferAddRead(i2sHandle, &bufferHandle, myBuffer, MY_BUFFER_SIZE);
+            
+		appData.state = APP_STATE_IDLE;
+		break;
         case APP_STATE_EVENT:
-            DRV_USART0_WriteByte('0');
-            for(i=0;i<3000000;i++);
-            //DRV_USART0_WriteByte(0x5a);
-            //PLIB_PORTS_PinWrite (PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_0, 0);
-            appData.state = APP_STATE_EVENT;
-            break;
+		DRV_USART0_WriteByte('0');
+		appData.state = APP_STATE_IDLE;
+		break;
         case APP_STATE_IDLE:
-            break;
+		break;
         
         default:
         {
-            /* TODO: Handle error in application's state machine. */
-            break;
+		/* TODO: Handle error in application's state machine. */
+		break;
         }
     }
 }

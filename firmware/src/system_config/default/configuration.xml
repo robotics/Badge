@@ -108,7 +108,7 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum>466DC05F9127B7A0D638FD770CDB4237</Checksum>
+        <Checksum>AEB016B967D39F0076BB83E9A77EE304</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.h</Name>
