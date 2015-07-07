@@ -79,9 +79,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 APP_DATA    appData;
 SYS_STATUS  i2sStatus;
 DRV_HANDLE i2sHandle;
-MY_APP_OBJ myAppObj;
 uint8_t myBuffer[MY_BUFFER_SIZE];
 DRV_I2S_BUFFER_HANDLE bufferHandle;
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -179,7 +179,7 @@ void APP_Tasks ( void )
 			
 			}
 		}
-		DRV_I2S_BufferEventHandlerSet(i2sHandle, APP_I2SBufferEventHandler, (uintptr_t)&myAppObj);
+		DRV_I2S_BufferEventHandlerSet(i2sHandle, APP_I2SBufferEventHandler, (uintptr_t)&appData);
 
 		DRV_I2S_BufferAddRead(i2sHandle, &bufferHandle, myBuffer, MY_BUFFER_SIZE);
             

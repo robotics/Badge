@@ -93,7 +93,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>417885CA65D901EB3C167227069643B1</Checksum>
+        <Checksum>E60CFDF9823214E4BFE8734CE834EA17</Checksum>
       </Template>
       <Template>
         <Name>drv_usart_static.h</Name>
@@ -108,7 +108,7 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum>AEB016B967D39F0076BB83E9A77EE304</Checksum>
+        <Checksum>DE0FC4B848DE0C52851CE2E6B2A78E92</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.h</Name>
