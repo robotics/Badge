@@ -21,16 +21,9 @@
 #include "decadriver/deca_spi.h"
 #include "stdio.h"
 
-extern void usb_run(void);
-extern int usb_init(void);
-extern void usb_printconfig(int, uint8*, int);
-extern void send_usbmessage(uint8*, int);
-
-
 #define DWINTERRUPT_EN (1)  //set to 1 when using DW interrupt, set to 0 to poll DW1000 IRQ line
 
 #define SOFTWARE_VER_STRING    "Version 3.05    " //
-
 
 #define SWS1_SRM_MODE 0x80  //slow ranging mode with PC - response is configurable and > 150 ms
 #define SWS1_ANC_MODE 0x08  //anchor mode
