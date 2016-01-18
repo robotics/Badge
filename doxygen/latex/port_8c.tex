@@ -1,0 +1,166 @@
+\hypertarget{port_8c}{\section{src/platform/port.c File Reference}
+\label{port_8c}\index{src/platform/port.\-c@{src/platform/port.\-c}}
+}
+
+
+H\-W specific definitions and functions for portability.  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{port_8c_a116eb2d98bc56ba455be68e1ab2f4b42}{\#define {\bfseries rcc\-\_\-init}(x)~R\-C\-C\-\_\-\-Configuration(x)}\label{port_8c_a116eb2d98bc56ba455be68e1ab2f4b42}
+
+\item 
+\hypertarget{port_8c_a936264c1d64666c72d10821ef3557b12}{\#define {\bfseries systick\-\_\-init}(x)~Sys\-Tick\-\_\-\-Configuration(x)}\label{port_8c_a936264c1d64666c72d10821ef3557b12}
+
+\item 
+\hypertarget{port_8c_a38db523f644d64de7fb66433a968d081}{\#define {\bfseries rtc\-\_\-init}(x)~R\-T\-C\-\_\-\-Configuration(x)}\label{port_8c_a38db523f644d64de7fb66433a968d081}
+
+\item 
+\hypertarget{port_8c_aa30c710c17965bcced5f40babc95bbbc}{\#define {\bfseries interrupt\-\_\-init}(x)~N\-V\-I\-C\-\_\-\-Configuration(x)}\label{port_8c_aa30c710c17965bcced5f40babc95bbbc}
+
+\item 
+\hypertarget{port_8c_a52e54df88c25e9e1281a3859d776cca2}{\#define {\bfseries usart\-\_\-init}(x)~U\-S\-A\-R\-T\-\_\-\-Configuration(x)}\label{port_8c_a52e54df88c25e9e1281a3859d776cca2}
+
+\item 
+\hypertarget{port_8c_ab887490a42f47a097c9a2126231809be}{\#define {\bfseries spi\-\_\-init}(x)~S\-P\-I\-\_\-\-Configuration(x)}\label{port_8c_ab887490a42f47a097c9a2126231809be}
+
+\item 
+\hypertarget{port_8c_a2c8709431b5f737c014dcc2b3acc8222}{\#define {\bfseries gpio\-\_\-init}(x)~G\-P\-I\-O\-\_\-\-Configuration(x)}\label{port_8c_a2c8709431b5f737c014dcc2b3acc8222}
+
+\item 
+\hypertarget{port_8c_a3c1f73a6462e689bfbc64339850b17f7}{\#define {\bfseries ethernet\-\_\-init}(x)~No\-\_\-\-Configuration(x)}\label{port_8c_a3c1f73a6462e689bfbc64339850b17f7}
+
+\item 
+\hypertarget{port_8c_a2e5c320e4e0ef93c9ac7b4cdd9cceee4}{\#define {\bfseries fs\-\_\-init}(x)~No\-\_\-\-Configuration(x)}\label{port_8c_a2e5c320e4e0ef93c9ac7b4cdd9cceee4}
+
+\item 
+\hypertarget{port_8c_abd34870338caeb8802ff45c1e28dff81}{\#define {\bfseries usb\-\_\-init}(x)~No\-\_\-\-Configuration(x)}\label{port_8c_abd34870338caeb8802ff45c1e28dff81}
+
+\item 
+\hypertarget{port_8c_a58acfaa873a905291f535b32b0884841}{\#define {\bfseries lcd\-\_\-init}(x)~No\-\_\-\-Configuration(x)}\label{port_8c_a58acfaa873a905291f535b32b0884841}
+
+\item 
+\hypertarget{port_8c_ac50365dbd4aa79641485e9071e12ac0a}{\#define {\bfseries touch\-\_\-screen\-\_\-init}(x)~No\-\_\-\-Configuration(x)}\label{port_8c_ac50365dbd4aa79641485e9071e12ac0a}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{port_8c_a8908f4fae0c85a3e26a62f04c1b9f6f2}{int {\bfseries No\-\_\-\-Configuration} (void)}\label{port_8c_a8908f4fae0c85a3e26a62f04c1b9f6f2}
+
+\item 
+\hypertarget{port_8c_ab2cda3f116f8e3cad924aa30ef3a6f10}{unsigned long {\bfseries port\-Get\-Tick\-Cnt} (void)}\label{port_8c_ab2cda3f116f8e3cad924aa30ef3a6f10}
+
+\item 
+\hypertarget{port_8c_ac2132930bb5e0592f70b9f2ce14c474c}{int {\bfseries Sys\-Tick\-\_\-\-Configuration} (void)}\label{port_8c_ac2132930bb5e0592f70b9f2ce14c474c}
+
+\item 
+\hypertarget{port_8c_a539951c46341882b44b63c9f1969c1a5}{void {\bfseries R\-T\-C\-\_\-\-Configuration} (void)}\label{port_8c_a539951c46341882b44b63c9f1969c1a5}
+
+\item 
+\hypertarget{port_8c_a2fe067d596641f3882af567482b459e6}{int {\bfseries N\-V\-I\-C\-\_\-\-Disable\-D\-E\-C\-A\-I\-R\-Q} (void)}\label{port_8c_a2fe067d596641f3882af567482b459e6}
+
+\item 
+\hypertarget{port_8c_a5e23e4e87760c564fa1611cbc3ce8a88}{int {\bfseries N\-V\-I\-C\-\_\-\-Configuration} (void)}\label{port_8c_a5e23e4e87760c564fa1611cbc3ce8a88}
+
+\item 
+I\-T\-Status \hyperlink{port_8c_a379cc65940ceb03631595e953d1f2729}{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status} (uint32\-\_\-t E\-X\-T\-I\-\_\-\-Line)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified E\-X\-T\-I line is enabled or not. \end{DoxyCompactList}\item 
+\hypertarget{port_8c_a6efbafaaca275c77dc0fe0117a57e925}{int {\bfseries R\-C\-C\-\_\-\-Configuration} (void)}\label{port_8c_a6efbafaaca275c77dc0fe0117a57e925}
+
+\item 
+\hypertarget{port_8c_a0d1c7f0b0fdc3bedd60e599adb901adb}{int {\bfseries U\-S\-A\-R\-T\-\_\-\-Configuration} (void)}\label{port_8c_a0d1c7f0b0fdc3bedd60e599adb901adb}
+
+\item 
+\hypertarget{port_8c_a76511b9eccfa5fbfbcb057dc578b7a0a}{void {\bfseries S\-P\-I\-\_\-\-Change\-Rate} (uint16\-\_\-t scalingfactor)}\label{port_8c_a76511b9eccfa5fbfbcb057dc578b7a0a}
+
+\item 
+\hypertarget{port_8c_a9b94752a2b28d7b481d2ddc37ea27204}{void {\bfseries S\-P\-I\-\_\-\-Config\-Fast\-Rate} (uint16\-\_\-t scalingfactor)}\label{port_8c_a9b94752a2b28d7b481d2ddc37ea27204}
+
+\item 
+\hypertarget{port_8c_ad02e43f8d3516981e32778e79fb5cf0c}{int {\bfseries S\-P\-I\-\_\-\-Configuration} (void)}\label{port_8c_ad02e43f8d3516981e32778e79fb5cf0c}
+
+\item 
+\hypertarget{port_8c_ae2fdf05f76c28a3656774d2b3e670304}{int {\bfseries G\-P\-I\-O\-\_\-\-Configuration} (void)}\label{port_8c_ae2fdf05f76c28a3656774d2b3e670304}
+
+\item 
+\hypertarget{port_8c_aab5c3e0da0d88b352e2c69a830c8c27f}{void {\bfseries reset\-\_\-\-D\-W1000} (void)}\label{port_8c_aab5c3e0da0d88b352e2c69a830c8c27f}
+
+\item 
+\hypertarget{port_8c_a51b6136902f21237d61b2f51ab9f62f3}{void {\bfseries setup\-\_\-\-D\-W1000\-R\-S\-Tn\-I\-R\-Q} (int enable)}\label{port_8c_a51b6136902f21237d61b2f51ab9f62f3}
+
+\item 
+\hypertarget{port_8c_a1a85f40d0e72011b8919f084675591bc}{int {\bfseries is\-\_\-button\-\_\-low} (uint16\-\_\-t G\-P\-I\-Opin)}\label{port_8c_a1a85f40d0e72011b8919f084675591bc}
+
+\item 
+\hypertarget{port_8c_a52a17c008c82f416cf1b0c2852c071f4}{int {\bfseries is\-\_\-switch\-\_\-on} (uint16\-\_\-t G\-P\-I\-Opin)}\label{port_8c_a52a17c008c82f416cf1b0c2852c071f4}
+
+\item 
+\hypertarget{port_8c_a5d808866768445dd5078f4bc650bfc01}{void {\bfseries led\-\_\-off} (led\-\_\-t led)}\label{port_8c_a5d808866768445dd5078f4bc650bfc01}
+
+\item 
+\hypertarget{port_8c_a1ac9f320b49d0895feedb41404c4a377}{void {\bfseries led\-\_\-on} (led\-\_\-t led)}\label{port_8c_a1ac9f320b49d0895feedb41404c4a377}
+
+\item 
+\hypertarget{port_8c_ad6fcb57fb5be4c8187545cb025017070}{int {\bfseries is\-\_\-\-I\-R\-Q\-\_\-enabled} (void)}\label{port_8c_ad6fcb57fb5be4c8187545cb025017070}
+
+\item 
+\hypertarget{port_8c_a110190c5cfbec6b1dfb913f4f55a2249}{int {\bfseries peripherals\-\_\-init} (void)}\label{port_8c_a110190c5cfbec6b1dfb913f4f55a2249}
+
+\item 
+\hypertarget{port_8c_a585a85718949bb74f405b2ad4935bf3e}{void {\bfseries spi\-\_\-peripheral\-\_\-init} ()}\label{port_8c_a585a85718949bb74f405b2ad4935bf3e}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{port_8c_a9e06abb8116255b03c91876143f74e2a}{\-\_\-\-\_\-\-I\-O unsigned long {\bfseries time32\-\_\-incr}}\label{port_8c_a9e06abb8116255b03c91876143f74e2a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\-W specific definitions and functions for portability. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{port_8c_a379cc65940ceb03631595e953d1f2729}{\index{port.\-c@{port.\-c}!E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status@{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}}
+\index{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status@{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}!port.c@{port.\-c}}
+\subsubsection[{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}]{\setlength{\rightskip}{0pt plus 5cm}I\-T\-Status E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{E\-X\-T\-I\-\_\-\-Line}
+\end{DoxyParamCaption}
+)}}\label{port_8c_a379cc65940ceb03631595e953d1f2729}
+
+
+Checks whether the specified E\-X\-T\-I line is enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em E\-X\-T\-I\-\_\-\-Line} & specifies the E\-X\-T\-I line to check. This parameter can be\-: \begin{DoxyItemize}
+\item E\-X\-T\-I\-\_\-\-Linex\-: External interrupt line x where x(0..19) \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & \char`\"{}enable\char`\"{} state of E\-X\-T\-I\-\_\-\-Line (S\-E\-T or R\-E\-S\-E\-T). \\
+\hline
+\end{DoxyRetVals}

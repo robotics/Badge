@@ -1,0 +1,72 @@
+\hypertarget{instance__common_8c}{\section{src/application/instance\-\_\-common.c File Reference}
+\label{instance__common_8c}\index{src/application/instance\-\_\-common.\-c@{src/application/instance\-\_\-common.\-c}}
+}
+
+
+Deca\-Wave application level common instance functions.  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-device\-\_\-api.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-spi.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}instance.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{instance__common_8c_af9218022f23f370521caf770ffc075d2}{uint64 {\bfseries convertmicrosectodevicetimeu} (double microsecu)}\label{instance__common_8c_af9218022f23f370521caf770ffc075d2}
+
+\item 
+\hypertarget{instance__common_8c_ab0da69abb2b7f8735ac69a19d7fa78d3}{uint32 {\bfseries convertmicrosectodevicetimeu32} (double microsecu)}\label{instance__common_8c_ab0da69abb2b7f8735ac69a19d7fa78d3}
+
+\item 
+\hypertarget{instance__common_8c_aa27b9b0c9510a93f6eed0a42f6b4763d}{double {\bfseries convertdevicetimetosec} (int32 dt)}\label{instance__common_8c_aa27b9b0c9510a93f6eed0a42f6b4763d}
+
+\item 
+\hypertarget{instance__common_8c_a75b22f20b77641c46a282ab5056c9d80}{double {\bfseries convertdevicetimetosec8} (uint8 $\ast$dt)}\label{instance__common_8c_a75b22f20b77641c46a282ab5056c9d80}
+
+\item 
+\hypertarget{instance__common_8c_ae915ea204323b94c0c0c6b623792b840}{void {\bfseries report\-T\-O\-F} (\hyperlink{structinstance__data__t}{instance\-\_\-data\-\_\-t} $\ast$inst)}\label{instance__common_8c_ae915ea204323b94c0c0c6b623792b840}
+
+\item 
+\hypertarget{instance__common_8c_ade5c51670d0745297ab3e3640b5df467}{int {\bfseries instaddtagtolist} (\hyperlink{structinstance__data__t}{instance\-\_\-data\-\_\-t} $\ast$inst, uint8 $\ast$tag\-Addr)}\label{instance__common_8c_ade5c51670d0745297ab3e3640b5df467}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{instance__common_8c_a48d08614e495919da4f62ec3d88cebd7}{double {\bfseries inst\-\_\-idist} = 0}\label{instance__common_8c_a48d08614e495919da4f62ec3d88cebd7}
+
+\item 
+\hypertarget{instance__common_8c_a8b46c05b1e395a4eb1e9ef77605e20c8}{double {\bfseries inst\-\_\-idistraw} = 0}\label{instance__common_8c_a8b46c05b1e395a4eb1e9ef77605e20c8}
+
+\item 
+\hypertarget{instance__common_8c_acc4afd3cbcfbb4db7fb799ff26049c0f}{double {\bfseries inst\-\_\-adist} = 0}\label{instance__common_8c_acc4afd3cbcfbb4db7fb799ff26049c0f}
+
+\item 
+\hypertarget{instance__common_8c_a9a1704d038e892ff24070b69f95072f0}{double {\bfseries inst\-\_\-ldist} = 0}\label{instance__common_8c_a9a1704d038e892ff24070b69f95072f0}
+
+\item 
+\hypertarget{instance__common_8c_adc3b2d30f5233636901ab88545e129f7}{\hyperlink{structinstance__data__t}{instance\-\_\-data\-\_\-t} {\bfseries instance\-\_\-data} \mbox{[}N\-U\-M\-\_\-\-I\-N\-S\-T\mbox{]}}\label{instance__common_8c_adc3b2d30f5233636901ab88545e129f7}
+
+\item 
+\hypertarget{instance__common_8c_a9141d56f5067eb396df1a443200af008}{\hyperlink{structinstance__localdata__t}{instance\-\_\-localdata\-\_\-t} {\bfseries instance\-\_\-localdata} \mbox{[}N\-U\-M\-\_\-\-I\-N\-S\-T\mbox{]}}\label{instance__common_8c_a9141d56f5067eb396df1a443200af008}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Deca\-Wave application level common instance functions. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}

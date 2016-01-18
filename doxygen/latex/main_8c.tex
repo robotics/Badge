@@ -1,0 +1,179 @@
+\hypertarget{main_8c}{\section{main.\-c File Reference}
+\label{main_8c}\index{main.\-c@{main.\-c}}
+}
+
+
+main loop for the Deca\-Ranging application  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}instance.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-types.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-spi.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structchConfig__t}{ch\-Config\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_acddf74472fa6440e662c7cb08417d72c}{\#define {\bfseries D\-W\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-E\-N}~(1)}\label{main_8c_acddf74472fa6440e662c7cb08417d72c}
+
+\item 
+\hypertarget{main_8c_acbc5d3baec60a1a4452719df360d6c95}{\#define {\bfseries S\-O\-F\-T\-W\-A\-R\-E\-\_\-\-V\-E\-R\-\_\-\-S\-T\-R\-I\-N\-G}~\char`\"{}Version 3.\-05    \char`\"{}}\label{main_8c_acbc5d3baec60a1a4452719df360d6c95}
+
+\item 
+\hypertarget{main_8c_a60e9ee71a22fb6664af74cdc5cd7d3fb}{\#define {\bfseries S\-W\-S1\-\_\-\-S\-R\-M\-\_\-\-M\-O\-D\-E}~0x80}\label{main_8c_a60e9ee71a22fb6664af74cdc5cd7d3fb}
+
+\item 
+\hypertarget{main_8c_a77558d5a1284cdbe0d9e57155fb2587a}{\#define {\bfseries S\-W\-S1\-\_\-\-A\-N\-C\-\_\-\-M\-O\-D\-E}~0x08}\label{main_8c_a77558d5a1284cdbe0d9e57155fb2587a}
+
+\item 
+\hypertarget{main_8c_a3c7d69f6e333a27745277e0ed476598b}{\#define {\bfseries S\-W\-S1\-\_\-\-S\-H\-F\-\_\-\-M\-O\-D\-E}~0x10}\label{main_8c_a3c7d69f6e333a27745277e0ed476598b}
+
+\item 
+\hypertarget{main_8c_a8104f8d4db92503201dfc766ac70fce6}{\#define {\bfseries S\-W\-S1\-\_\-64\-M\-\_\-\-M\-O\-D\-E}~0x20}\label{main_8c_a8104f8d4db92503201dfc766ac70fce6}
+
+\item 
+\hypertarget{main_8c_a2f2a38ec641af3b47035aa87b0837d24}{\#define {\bfseries S\-W\-S1\-\_\-\-C\-H5\-\_\-\-M\-O\-D\-E}~0x40}\label{main_8c_a2f2a38ec641af3b47035aa87b0837d24}
+
+\item 
+\hypertarget{main_8c_a20b2c4b28489a3409a74f57ef559847e}{\#define {\bfseries L\-C\-D\-\_\-\-B\-U\-F\-F\-\_\-\-L\-E\-N}~(100)}\label{main_8c_a20b2c4b28489a3409a74f57ef559847e}
+
+\item 
+\hypertarget{main_8c_a83299840aed54f02d535a76838aee9a1}{\#define {\bfseries switch\-\_\-mask}~(0x7\-F)}\label{main_8c_a83299840aed54f02d535a76838aee9a1}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_ac705a94e67751a5d9e5ff2c8d9786967}{typedef int($\ast$ {\bfseries switch\-\_\-handler\-\_\-t} )(uint16)}\label{main_8c_ac705a94e67751a5d9e5ff2c8d9786967}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga5a091f83ce73e386ae2f934aa5d6d40b}{void {\bfseries usb\-\_\-run} (void)}\label{group__USB__VCP__Private__Variables_ga5a091f83ce73e386ae2f934aa5d6d40b}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_gae227d2d613cf288a240925ac43baea5f}{int {\bfseries usb\-\_\-init} (void)}\label{group__USB__VCP__Private__Variables_gae227d2d613cf288a240925ac43baea5f}
+
+\item 
+void \hyperlink{group__USB__VCP__Private__Variables_gaf2622d49bb9b422ba14489aae673e1dc}{usb\-\_\-printconfig} (int, uint8 $\ast$, int)
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga19ef21815696bf0976c1f824f04d700f}{void {\bfseries send\-\_\-usbmessage} (uint8 $\ast$, int)}\label{group__USB__VCP__Private__Variables_ga19ef21815696bf0976c1f824f04d700f}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga6d95e46b979b0426caba7773822c8a4c}{uint32 {\bfseries inittestapplication} (uint8 s1switch)}\label{group__USB__VCP__Private__Variables_ga6d95e46b979b0426caba7773822c8a4c}
+
+\item 
+\hypertarget{main_8c_aba585c03def4edecc8b4152a7d68c4cd}{void {\bfseries restartinstance} (void)}\label{main_8c_aba585c03def4edecc8b4152a7d68c4cd}
+
+\item 
+\hypertarget{main_8c_ae654353be85b6022ca69e54d4103578d}{int {\bfseries decarangingmode} (uint8 s1switch)}\label{main_8c_ae654353be85b6022ca69e54d4103578d}
+
+\item 
+void \hyperlink{main_8c_a482118951315b57e3a3bfbb5c704d8a2}{process\-\_\-dw\-R\-S\-Tn\-\_\-irq} (void)
+\item 
+\hypertarget{main_8c_a0c5bdeda3b2f5a4227972abdc27edf68}{void {\bfseries process\-\_\-deca\-\_\-irq} (void)}\label{main_8c_a0c5bdeda3b2f5a4227972abdc27edf68}
+
+\item 
+\hypertarget{main_8c_a182a54305d5aab1df13015a69aef5e3c}{void {\bfseries init\-L\-C\-D} (void)}\label{main_8c_a182a54305d5aab1df13015a69aef5e3c}
+
+\item 
+\hypertarget{main_8c_aee2a80c6a99a6b22460de1a72b6af08a}{void {\bfseries test\-\_\-application\-\_\-run} (void)}\label{main_8c_aee2a80c6a99a6b22460de1a72b6af08a}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga574ae666fa6f17d97de75da97a694faf}{void {\bfseries set\-L\-C\-Dline1} (uint8 s1switch)}\label{group__USB__VCP__Private__Variables_ga574ae666fa6f17d97de75da97a694faf}
+
+\item 
+\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{int {\bfseries main} (void)}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_aedb9b0d314e3b36b7b253e0322f9ce72}{int {\bfseries instance\-\_\-anchaddr} = 0}\label{main_8c_aedb9b0d314e3b36b7b253e0322f9ce72}
+
+\item 
+\hypertarget{main_8c_a88a6b6cfef0d42e578979cb976d71699}{int {\bfseries dr\-\_\-mode} = 0}\label{main_8c_a88a6b6cfef0d42e578979cb976d71699}
+
+\item 
+\hypertarget{main_8c_aef1844165e9eab847846b06d4253a1eb}{int {\bfseries instance\-\_\-mode} = A\-N\-C\-H\-O\-R}\label{main_8c_aef1844165e9eab847846b06d4253a1eb}
+
+\item 
+\hypertarget{main_8c_a1465a338f98ebf4422f9702d1b5c0431}{uint8 {\bfseries s1switch} = 0}\label{main_8c_a1465a338f98ebf4422f9702d1b5c0431}
+
+\item 
+\hypertarget{main_8c_a029c258ce4f699b778c719cd0ef54d1b}{int {\bfseries chan}}\label{main_8c_a029c258ce4f699b778c719cd0ef54d1b}
+
+\item 
+\hypertarget{main_8c_a09f5069886a170c8765fee83b47d24ab}{int {\bfseries tagaddr}}\label{main_8c_a09f5069886a170c8765fee83b47d24ab}
+
+\item 
+\hypertarget{main_8c_ae780dad6efd441377c6ec3880489bd2d}{int {\bfseries ancaddr}}\label{main_8c_ae780dad6efd441377c6ec3880489bd2d}
+
+\item 
+\hypertarget{main_8c_a43131867a4adf3b5b0546416a8f36332}{uint8 {\bfseries dataseq} \mbox{[}L\-C\-D\-\_\-\-B\-U\-F\-F\-\_\-\-L\-E\-N\mbox{]}}\label{main_8c_a43131867a4adf3b5b0546416a8f36332}
+
+\item 
+\hypertarget{main_8c_ae52e7f0e2dbfd608bdc64bd14958017f}{uint8 {\bfseries dataseq1} \mbox{[}L\-C\-D\-\_\-\-B\-U\-F\-F\-\_\-\-L\-E\-N\mbox{]}}\label{main_8c_ae52e7f0e2dbfd608bdc64bd14958017f}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga8d2175a3b0706c64080d8beb0e7a3cd7}{int {\bfseries ranging} = 0}\label{group__USB__VCP__Private__Variables_ga8d2175a3b0706c64080d8beb0e7a3cd7}
+
+\item 
+\hypertarget{main_8c_a6b1001751ede50741256fb6654bd15b1}{\hyperlink{structchConfig__t}{ch\-Config\-\_\-t} {\bfseries ch\-Config} \mbox{[}8\mbox{]}}\label{main_8c_a6b1001751ede50741256fb6654bd15b1}
+
+\item 
+\hypertarget{main_8c_a815aa90e6dcb5cc0949e2afe3ddd68b9}{const uint8 {\bfseries switchbuf} \mbox{[}$\,$\mbox{]} =\{0, T\-A\-\_\-\-S\-W1\-\_\-3 , T\-A\-\_\-\-S\-W1\-\_\-4 , T\-A\-\_\-\-S\-W1\-\_\-5 , T\-A\-\_\-\-S\-W1\-\_\-6 , T\-A\-\_\-\-S\-W1\-\_\-7 , T\-A\-\_\-\-S\-W1\-\_\-8 \}}\label{main_8c_a815aa90e6dcb5cc0949e2afe3ddd68b9}
+
+\item 
+const switch\-\_\-handler\-\_\-t {\bfseries switch\-\_\-fn} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+main loop for the Deca\-Ranging application 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_a482118951315b57e3a3bfbb5c704d8a2}{\index{main.\-c@{main.\-c}!process\-\_\-dw\-R\-S\-Tn\-\_\-irq@{process\-\_\-dw\-R\-S\-Tn\-\_\-irq}}
+\index{process\-\_\-dw\-R\-S\-Tn\-\_\-irq@{process\-\_\-dw\-R\-S\-Tn\-\_\-irq}!main.c@{main.\-c}}
+\subsubsection[{process\-\_\-dw\-R\-S\-Tn\-\_\-irq}]{\setlength{\rightskip}{0pt plus 5cm}void process\-\_\-dw\-R\-S\-Tn\-\_\-irq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a482118951315b57e3a3bfbb5c704d8a2}
+===========================================================================
+
+Abstract\-: main program 
+
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{main_8c_a6f842fbda9627e877cf039c321af3105}{\index{main.\-c@{main.\-c}!switch\-\_\-fn@{switch\-\_\-fn}}
+\index{switch\-\_\-fn@{switch\-\_\-fn}!main.c@{main.\-c}}
+\subsubsection[{switch\-\_\-fn}]{\setlength{\rightskip}{0pt plus 5cm}const switch\-\_\-handler\-\_\-t switch\-\_\-fn\mbox{[}$\,$\mbox{]}}}\label{main_8c_a6f842fbda9627e877cf039c321af3105}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{ is\_button\_low, 
+                                is\_switch\_on, is\_switch\_on, is\_switch\_on,
+                                is\_switch\_on, is\_switch\_on, is\_switch\_on \}
+\end{DoxyCode}

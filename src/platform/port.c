@@ -340,132 +340,22 @@ void SPI_ConfigFastRate(uint16_t scalingfactor)
 
 int SPI_Configuration(void)
 {
-	SPI_InitTypeDef SPI_InitStructure;
-	GPIO_InitTypeDef GPIO_InitStructure;
+  // Set MOSI and SCK as O/P
+    DDRB = (1<<5)|(1<<3);
 
-	SPI_I2S_DeInit(SPIx);
+    //Enable SPI, Set as Master
+    //Prescaler:Fosc/16, Enable Interrupts
+    //The MOSI, SCK pins are as per Atmega328p
+    SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0)|(1<<SPIE);
 
-	// SPIx Mode setup
-	SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
-	SPI_InitStructure.SPI_Mode = SPI_Mode_Master;
-	SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;
-	SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;	 //
-	//SPI_InitStructure.SPI_CPOL = SPI_CPOL_High; //
-	SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
-	//SPI_InitStructure.SPI_CPHA = SPI_CPHA_2Edge; //
-	//SPI_InitStructure.SPI_NSS = SPI_NSS_Hard;
-	SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
-	//SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4; //sets BR[2:0] bits - baudrate in SPI_CR1 reg bits 4-6
-	SPI_InitStructure.SPI_BaudRatePrescaler = SPIx_PRESCALER;
-	SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
-	SPI_InitStructure.SPI_CRCPolynomial = 7;
+    // Enable Global Interrupts
+    sei();
 
-	SPI_Init(SPIx, &SPI_InitStructure);
-
-	// SPIx SCK and MOSI pin setup
-	GPIO_InitStructure.GPIO_Pin = SPIx_SCK | SPIx_MOSI;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-	GPIO_Init(SPIx_GPIO, &GPIO_InitStructure);
-
-	// SPIx MISO pin setup
-	GPIO_InitStructure.GPIO_Pin = SPIx_MISO;
-	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IPU;
-
-	GPIO_Init(SPIx_GPIO, &GPIO_InitStructure);
-
-	// SPIx CS pin setup
-	GPIO_InitStructure.GPIO_Pin = SPIx_CS;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-	GPIO_Init(SPIx_CS_GPIO, &GPIO_InitStructure);
-
-	// Disable SPIx SS Output
-	SPI_SSOutputCmd(SPIx, DISABLE);
-
-	// Enable SPIx
-	SPI_Cmd(SPIx, ENABLE);
-
-	// Set CS high
-	GPIO_SetBits(SPIx_CS_GPIO, SPIx_CS);
 
     return 0;
 }
 
 
-int SPI2_Configuration(void)
-{
-	SPI_InitTypeDef SPI_InitStructure;
-	GPIO_InitTypeDef GPIO_InitStructure;
-
-	SPI_I2S_DeInit(SPIy);
-
-	// SPIy Mode setup
-	//SPI_InitStructure.SPI_Direction = SPI_Direction_1Line_Tx;
-	SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
-	SPI_InitStructure.SPI_Mode = SPI_Mode_Master;
-	SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;
-	//SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;	 //
-	SPI_InitStructure.SPI_CPOL = SPI_CPOL_High; //
-	//SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
-	SPI_InitStructure.SPI_CPHA = SPI_CPHA_2Edge; //
-	//SPI_InitStructure.SPI_NSS = SPI_NSS_Hard;
-	SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
-	SPI_InitStructure.SPI_BaudRatePrescaler = SPIy_PRESCALER;
-	SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
-	SPI_InitStructure.SPI_CRCPolynomial = 7;
-
-	SPI_Init(SPIy, &SPI_InitStructure);
-
-	// SPIy SCK and MOSI pin setup
-	GPIO_InitStructure.GPIO_Pin = SPIy_SCK | SPIy_MOSI;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-	GPIO_Init(SPIy_GPIO, &GPIO_InitStructure);
-
-	// SPIy MISO pin setup
-	GPIO_InitStructure.GPIO_Pin = SPIy_MISO;
-	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IPU;
-
-	GPIO_Init(SPIy_GPIO, &GPIO_InitStructure);
-
-	// SPIy CS pin setup
-	GPIO_InitStructure.GPIO_Pin = SPIy_CS;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-	GPIO_Init(SPIy_CS_GPIO, &GPIO_InitStructure);
-
-	// Disable SPIy SS Output
-	SPI_SSOutputCmd(SPIy, DISABLE);
-
-	// Enable SPIy
-	SPI_Cmd(SPIy, ENABLE);
-
-	// Set CS high
-	GPIO_SetBits(SPIy_CS_GPIO, SPIy_CS);
-
-	// LCD_RS pin setup
-	GPIO_InitStructure.GPIO_Pin = LCD_RS;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-	GPIO_Init(SPIy_GPIO, &GPIO_InitStructure);
-
-	// LCD_RW pin setup
-	GPIO_InitStructure.GPIO_Pin = LCD_RW;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-	GPIO_Init(SPIy_GPIO, &GPIO_InitStructure);
-
-    return 0;
-}
 
 int GPIO_Configuration(void)
 {
@@ -600,92 +490,6 @@ void setup_DW1000RSTnIRQ(int enable)
 }
 
 
-int ETH_GPIOConfigure(void)
-{
-#if 0
-	GPIO_InitTypeDef GPIO_InitStructure;
-
-	/* ETHERNET pins configuration */
-	/* AF Output Push Pull:
-	- ETH_MII_MDIO / ETH_RMII_MDIO: PA2
-	- ETH_MII_MDC / ETH_RMII_MDC: PC1
-	- ETH_MII_TXD2: PC2
-	- ETH_MII_TX_EN / ETH_RMII_TX_EN: PB11
-	- ETH_MII_TXD0 / ETH_RMII_TXD0: PB12
-	- ETH_MII_TXD1 / ETH_RMII_TXD1: PB13
-	- ETH_MII_PPS_OUT / ETH_RMII_PPS_OUT: PB5
-	- ETH_MII_TXD3: PB8 */
-
-	/* Configure PA2 as alternate function push-pull */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	/* Configure PC1 and PC2 as alternate function push-pull */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_Init(GPIOC, &GPIO_InitStructure);
-
-	/* Configure PB5, PB8, PB11, PB12 and PB13 as alternate function push-pull */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5 | GPIO_Pin_8 | GPIO_Pin_11 |
-								GPIO_Pin_12 | GPIO_Pin_13;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);
-
-	/**************************************************************/
-	/*               For Remapped Ethernet pins                   */
-	/*************************************************************/
-	/* Input (Reset Value):
-	- ETH_MII_CRS CRS: PA0
-	- ETH_MII_RX_CLK / ETH_RMII_REF_CLK: PA1
-	- ETH_MII_COL: PA3
-	- ETH_MII_RX_DV / ETH_RMII_CRS_DV: PD8
-	- ETH_MII_TX_CLK: PC3
-	- ETH_MII_RXD0 / ETH_RMII_RXD0: PD9
-	- ETH_MII_RXD1 / ETH_RMII_RXD1: PD10
-	- ETH_MII_RXD2: PD11
-	- ETH_MII_RXD3: PD12
-	- ETH_MII_RX_ER: PB10 */
-
-	/* Configure PA0, PA1 and PA3 as input */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_3;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	/* Configure PB10 as input */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);
-
-	/* Configure PC3 as input */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_Init(GPIOC, &GPIO_InitStructure);
-
-	/* Configure PD8, PD9, PD10, PD11 and PD12 as input */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_Init(GPIOD, &GPIO_InitStructure); /**/
-
-
-
-	/* MCO pin configuration------------------------------------------------- */
-	/* Configure MCO (PA8) as alternate function push-pull */
-	//GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
-	//GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	//GPIO_Init(GPIOA, &GPIO_InitStructure);
-#endif
-
-	return 0;
-}
 
 int is_button_low(uint16_t GPIOpin)
 {
@@ -893,11 +697,4 @@ int peripherals_init (void)
 void spi_peripheral_init()
 {
 	spi_init();
-
-	//initialise SPI2 peripheral for LCD control
-	SPI2_Configuration();
-
-	port_LCD_RS_clear();
-
-	port_LCD_RW_clear();
 }

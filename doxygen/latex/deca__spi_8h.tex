@@ -1,0 +1,83 @@
+\hypertarget{deca__spi_8h}{\section{include/platform/deca\-\_\-spi.h File Reference}
+\label{deca__spi_8h}\index{include/platform/deca\-\_\-spi.\-h@{include/platform/deca\-\_\-spi.\-h}}
+}
+
+
+S\-P\-I access functions.  
+
+
+{\ttfamily \#include \char`\"{}deca\-\_\-types.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{deca__spi_8h_a8b4c8339017ca0d53dbb4b80016d287c}{\#define {\bfseries D\-E\-C\-A\-\_\-\-M\-A\-X\-\_\-\-S\-P\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~(3)}\label{deca__spi_8h_a8b4c8339017ca0d53dbb4b80016d287c}
+
+\item 
+\hypertarget{deca__spi_8h_a9855bc8857ff63c9ede7b5a04aa1a15f}{\#define {\bfseries E\-V\-B1000\-\_\-\-L\-C\-D\-\_\-\-S\-U\-P\-P\-O\-R\-T}~(1)}\label{deca__spi_8h_a9855bc8857ff63c9ede7b5a04aa1a15f}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{deca__spi_8h_aaa325190dcc97448d86334c024a2c7c1}{openspi} (void)
+\item 
+int \hyperlink{deca__spi_8h_a7e04e65f1d3077bb9f263584d43f78a2}{closespi} (void)
+\item 
+void \hyperlink{deca__spi_8h_abd6781896fe6311c7cf3a11a6dbde704}{writeto\-L\-C\-D} (uint32 bodylength, uint8 rs\-\_\-enable, const uint8 $\ast$body\-Buffer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\-P\-I access functions. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{deca__spi_8h_a7e04e65f1d3077bb9f263584d43f78a2}{\index{deca\-\_\-spi.\-h@{deca\-\_\-spi.\-h}!closespi@{closespi}}
+\index{closespi@{closespi}!deca_spi.h@{deca\-\_\-spi.\-h}}
+\subsubsection[{closespi}]{\setlength{\rightskip}{0pt plus 5cm}int closespi (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8h_a7e04e65f1d3077bb9f263584d43f78a2}
+
+
+ Function\-: \hyperlink{deca__spi_8h_a7e04e65f1d3077bb9f263584d43f78a2}{closespi()}
+
+Low level abstract function to close the the S\-P\-I device. returns 0 for success, or -\/1 for error \hypertarget{deca__spi_8h_aaa325190dcc97448d86334c024a2c7c1}{\index{deca\-\_\-spi.\-h@{deca\-\_\-spi.\-h}!openspi@{openspi}}
+\index{openspi@{openspi}!deca_spi.h@{deca\-\_\-spi.\-h}}
+\subsubsection[{openspi}]{\setlength{\rightskip}{0pt plus 5cm}int openspi (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8h_aaa325190dcc97448d86334c024a2c7c1}
+
+
+ Function\-: \hyperlink{deca__spi_8h_aaa325190dcc97448d86334c024a2c7c1}{openspi()}
+
+Low level abstract function to open and initialise access to the S\-P\-I device. returns 0 for success, or -\/1 for error \hypertarget{deca__spi_8h_abd6781896fe6311c7cf3a11a6dbde704}{\index{deca\-\_\-spi.\-h@{deca\-\_\-spi.\-h}!writeto\-L\-C\-D@{writeto\-L\-C\-D}}
+\index{writeto\-L\-C\-D@{writeto\-L\-C\-D}!deca_spi.h@{deca\-\_\-spi.\-h}}
+\subsubsection[{writeto\-L\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}void writeto\-L\-C\-D (
+\begin{DoxyParamCaption}
+\item[{uint32}]{bodylength, }
+\item[{uint8}]{rs\-\_\-enable, }
+\item[{const uint8 $\ast$}]{body\-Buffer}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8h_abd6781896fe6311c7cf3a11a6dbde704}
+
+
+ Function\-: \hyperlink{deca__spi_8h_abd6781896fe6311c7cf3a11a6dbde704}{writeto\-L\-C\-D()}
+
+Low level abstract function to write data to the L\-C\-D display via S\-P\-I2 peripheral Takes byte buffer and rs\-\_\-enable signals or returns -\/1 if there was an error 

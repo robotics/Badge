@@ -1,0 +1,86 @@
+\hypertarget{deca__usb_8h}{\section{include/usb/deca\-\_\-usb.h File Reference}
+\label{deca__usb_8h}\index{include/usb/deca\-\_\-usb.\-h@{include/usb/deca\-\_\-usb.\-h}}
+}
+
+
+Deca\-Wave U\-S\-B application state machine for U\-S\-B to S\-P\-I feature.  
+
+
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\-\_\-cdc\-\_\-core.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\-\_\-conf.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_gad3e3a742cb326bee02d8fc63e9109d65}{uint16\-\_\-t {\bfseries D\-W\-\_\-\-V\-C\-P\-\_\-\-Init} (void)}\label{group__USB__VCP__Private__Variables_gad3e3a742cb326bee02d8fc63e9109d65}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_gaa10233a5f1e85ab0b9d6e0d01bd5b62d}{uint16\-\_\-t {\bfseries D\-W\-\_\-\-V\-C\-P\-\_\-\-De\-Init} (void)}\label{group__USB__VCP__Private__Variables_gaa10233a5f1e85ab0b9d6e0d01bd5b62d}
+
+\item 
+uint16\-\_\-t \hyperlink{group__USB__VCP__Private__Variables_ga2e3b17bc984eea2a7b76e7b7d9d0406f}{D\-W\-\_\-\-V\-C\-P\-\_\-\-Ctrl} (uint32\-\_\-t Cmd, uint8\-\_\-t $\ast$Buf, uint32\-\_\-t Len)
+\begin{DoxyCompactList}\small\item\em D\-W\-\_\-\-V\-C\-P\-\_\-\-Ctrl Manage the C\-D\-C class requests. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{group__USB__VCP__Private__Variables_ga6dea74c462d6a2e1bbc1a9aa150e1f68}{D\-W\-\_\-\-V\-C\-P\-\_\-\-Data\-Tx} (uint8\-\_\-t $\ast$Buf, uint32\-\_\-t Len)
+\begin{DoxyCompactList}\small\item\em D\-W\-\_\-\-V\-C\-P\-\_\-\-Data\-Tx C\-D\-C received data to be send over U\-S\-B I\-N endpoint are managed in this function. \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{group__USB__VCP__Private__Variables_ga6778c75f7602672145a342312f164403}{D\-W\-\_\-\-V\-C\-P\-\_\-\-Data\-Rx} (uint8\-\_\-t $\ast$Buf, uint32\-\_\-t Len)
+\begin{DoxyCompactList}\small\item\em D\-W\-\_\-\-V\-C\-P\-\_\-\-Data\-Rx Data received over U\-S\-B O\-U\-T endpoint are sent over C\-D\-C interface through this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_gafe5c98eeb78c2a7b7c327de82ae60aae}{int {\bfseries local\-\_\-buff\-\_\-length}}\label{group__USB__VCP__Private__Variables_gafe5c98eeb78c2a7b7c327de82ae60aae}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga936c65c629e32a25291f19db8dcb44ff}{uint8\-\_\-t {\bfseries local\-\_\-buff} \mbox{[}$\,$\mbox{]}}\label{group__USB__VCP__Private__Variables_ga936c65c629e32a25291f19db8dcb44ff}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_ga0c55472402674969649ba4ab9e3d7012}{int {\bfseries local\-\_\-have\-\_\-data}}\label{group__USB__VCP__Private__Variables_ga0c55472402674969649ba4ab9e3d7012}
+
+\item 
+\hypertarget{group__USB__VCP__Private__Variables_gacf7aa71b21bb2a96ebacf3fde3703ef4}{uint16\-\_\-t {\bfseries local\-\_\-buff\-\_\-offset}}\label{group__USB__VCP__Private__Variables_gacf7aa71b21bb2a96ebacf3fde3703ef4}
+
+\item 
+\hypertarget{deca__usb_8h_a957c2456f9604f828790b64475e4675f}{uint8\-\_\-t {\bfseries A\-P\-P\-\_\-\-Rx\-\_\-\-Buffer} \mbox{[}$\,$\mbox{]}}\label{deca__usb_8h_a957c2456f9604f828790b64475e4675f}
+
+\item 
+\hypertarget{deca__usb_8h_ab2f6638960106acc75456285d5940846}{uint32\-\_\-t {\bfseries A\-P\-P\-\_\-\-Rx\-\_\-ptr\-\_\-in}}\label{deca__usb_8h_ab2f6638960106acc75456285d5940846}
+
+\item 
+\hypertarget{deca__usb_8h_a23b8c64c9cd31f4afa519a02762581a8}{uint32\-\_\-t {\bfseries A\-P\-P\-\_\-\-Rx\-\_\-length}}\label{deca__usb_8h_a23b8c64c9cd31f4afa519a02762581a8}
+
+\item 
+C\-D\-C\-\_\-\-I\-F\-\_\-\-Prop\-\_\-\-Type\-Def {\bfseries V\-C\-P\-\_\-fops}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Deca\-Wave U\-S\-B application state machine for U\-S\-B to S\-P\-I feature. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Variable Documentation}
+\hypertarget{deca__usb_8h_a6c0d1b0352c9f4edf5a48f6de1e90282}{\index{deca\-\_\-usb.\-h@{deca\-\_\-usb.\-h}!V\-C\-P\-\_\-fops@{V\-C\-P\-\_\-fops}}
+\index{V\-C\-P\-\_\-fops@{V\-C\-P\-\_\-fops}!deca_usb.h@{deca\-\_\-usb.\-h}}
+\subsubsection[{V\-C\-P\-\_\-fops}]{\setlength{\rightskip}{0pt plus 5cm}C\-D\-C\-\_\-\-I\-F\-\_\-\-Prop\-\_\-\-Type\-Def V\-C\-P\-\_\-fops}}\label{deca__usb_8h_a6c0d1b0352c9f4edf5a48f6de1e90282}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+        DW\_VCP\_Init,
+        DW\_VCP\_DeInit,
+        \hyperlink{group__USB__VCP__Private__Variables_ga2e3b17bc984eea2a7b76e7b7d9d0406f}{DW\_VCP\_Ctrl},
+        \hyperlink{group__USB__VCP__Private__Variables_ga6dea74c462d6a2e1bbc1a9aa150e1f68}{DW\_VCP\_DataTx},
+        \hyperlink{group__USB__VCP__Private__Variables_ga6778c75f7602672145a342312f164403}{DW\_VCP\_DataRx}
+\}
+\end{DoxyCode}

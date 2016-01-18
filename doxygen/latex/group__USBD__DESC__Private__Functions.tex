@@ -1,0 +1,194 @@
+\hypertarget{group__USBD__DESC__Private__Functions}{\section{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}
+\label{group__USBD__DESC__Private__Functions}\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_gadd5d311559f5cf53f393f9b863bd8aae}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor return the device descriptor. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_gab5247caa36187728a45c43078d96497e}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor return the Lang\-I\-D string descriptor. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_ga3e9f418a2337898da999ca7548c414a9}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor return the product string descriptor. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_gaeb4b6e96436cb53ade2b8276568c27d1}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor return the manufacturer string descriptor. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_ga61caa6dd47de36f32d25e2d6980e5904}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor return the serial number string descriptor. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_ga1a95bda8d761cd993c82234e043270fc}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor return the configuration string descriptor. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__USBD__DESC__Private__Functions_gaf7003c494f598dd781416da3e468e615}{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor} (uint8\-\_\-t speed, uint16\-\_\-t $\ast$length)
+\begin{DoxyCompactList}\small\item\em U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor return the interface string descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__USBD__DESC__Private__Functions_ga1a95bda8d761cd993c82234e043270fc}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_ga1a95bda8d761cd993c82234e043270fc}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Config\-Str\-Descriptor return the configuration string descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__USBD__DESC__Private__Functions_gadd5d311559f5cf53f393f9b863bd8aae}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_gadd5d311559f5cf53f393f9b863bd8aae}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Device\-Descriptor return the device descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__USBD__DESC__Private__Functions_gaf7003c494f598dd781416da3e468e615}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_gaf7003c494f598dd781416da3e468e615}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Interface\-Str\-Descriptor return the interface string descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__USBD__DESC__Private__Functions_gab5247caa36187728a45c43078d96497e}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_gab5247caa36187728a45c43078d96497e}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Lang\-I\-D\-Str\-Descriptor return the Lang\-I\-D string descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__USBD__DESC__Private__Functions_gaeb4b6e96436cb53ade2b8276568c27d1}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_gaeb4b6e96436cb53ade2b8276568c27d1}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Manufacturer\-Str\-Descriptor return the manufacturer string descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__USBD__DESC__Private__Functions_ga3e9f418a2337898da999ca7548c414a9}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_ga3e9f418a2337898da999ca7548c414a9}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Product\-Str\-Descriptor return the product string descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__USBD__DESC__Private__Functions_ga61caa6dd47de36f32d25e2d6980e5904}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}!U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor}}
+\index{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor@{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor}!USBD_DESC_Private_Functions@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Functions}}
+\subsubsection[{U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{speed, }
+\item[{uint16\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__USBD__DESC__Private__Functions_ga61caa6dd47de36f32d25e2d6980e5904}
+
+
+U\-S\-B\-D\-\_\-\-U\-S\-R\-\_\-\-Serial\-Str\-Descriptor return the serial number string descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \-: current device speed \\
+\hline
+{\em length} & \-: pointer to data length variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to descriptor buffer \\
+\hline
+\end{DoxyRetVals}

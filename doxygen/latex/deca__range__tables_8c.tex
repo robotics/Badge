@@ -1,0 +1,107 @@
+\hypertarget{deca__range__tables_8c}{\section{src/decadriver/deca\-\_\-range\-\_\-tables.c File Reference}
+\label{deca__range__tables_8c}\index{src/decadriver/deca\-\_\-range\-\_\-tables.\-c@{src/decadriver/deca\-\_\-range\-\_\-tables.\-c}}
+}
+
+
+D\-W1000 range correction tables.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-device\-\_\-api.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-param\-\_\-types.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{deca__range__tables_8c_a8eedc0cd33ff1e0ba1d19d1bfd6d2565}{\#define {\bfseries N\-U\-M\-\_\-16\-M\-\_\-\-O\-F\-F\-S\-E\-T}~(37)}\label{deca__range__tables_8c_a8eedc0cd33ff1e0ba1d19d1bfd6d2565}
+
+\item 
+\hypertarget{deca__range__tables_8c_a4dced803ee04abad354e2b104e4e655e}{\#define {\bfseries N\-U\-M\-\_\-16\-M\-\_\-\-O\-F\-F\-S\-E\-T\-W\-B}~(68)}\label{deca__range__tables_8c_a4dced803ee04abad354e2b104e4e655e}
+
+\item 
+\hypertarget{deca__range__tables_8c_a291c7c57bf0bedcfb5f80925c7fb5c2f}{\#define {\bfseries N\-U\-M\-\_\-64\-M\-\_\-\-O\-F\-F\-S\-E\-T}~(26)}\label{deca__range__tables_8c_a291c7c57bf0bedcfb5f80925c7fb5c2f}
+
+\item 
+\hypertarget{deca__range__tables_8c_abad26c30ee727d5d7741094b080cbd73}{\#define {\bfseries N\-U\-M\-\_\-64\-M\-\_\-\-O\-F\-F\-S\-E\-T\-W\-B}~(59)}\label{deca__range__tables_8c_abad26c30ee727d5d7741094b080cbd73}
+
+\item 
+\hypertarget{deca__range__tables_8c_ac31e43fe738041beab231006a8939f71}{\#define {\bfseries C\-M\-\_\-\-O\-F\-F\-S\-E\-T\-\_\-16\-M\-\_\-\-N\-B}~(-\/23)}\label{deca__range__tables_8c_ac31e43fe738041beab231006a8939f71}
+
+\item 
+\hypertarget{deca__range__tables_8c_a4a0ad8db7db85272b04c3a6537eb1014}{\#define {\bfseries C\-M\-\_\-\-O\-F\-F\-S\-E\-T\-\_\-16\-M\-\_\-\-W\-B}~(-\/28)}\label{deca__range__tables_8c_a4a0ad8db7db85272b04c3a6537eb1014}
+
+\item 
+\hypertarget{deca__range__tables_8c_a45bdd6bdad20f6cd811a89c9b80c953d}{\#define {\bfseries C\-M\-\_\-\-O\-F\-F\-S\-E\-T\-\_\-64\-M\-\_\-\-N\-B}~(-\/17)}\label{deca__range__tables_8c_a45bdd6bdad20f6cd811a89c9b80c953d}
+
+\item 
+\hypertarget{deca__range__tables_8c_a703f159d19b15d942bd54db33e45150d}{\#define {\bfseries C\-M\-\_\-\-O\-F\-F\-S\-E\-T\-\_\-64\-M\-\_\-\-W\-B}~(-\/30)}\label{deca__range__tables_8c_a703f159d19b15d942bd54db33e45150d}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{deca__range__tables_8c_a487fc43a9977f30cb4de00543a843bcc}{dwt\-\_\-getrangebias} (uint8 chan, float range, uint8 prf)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{deca__range__tables_8c_a91d7d60cff6a950d263730b3611360ed}{const uint8 {\bfseries chan\-\_\-idxnb} \mbox{[}N\-U\-M\-\_\-\-C\-H\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\mbox{]} = \{0, 0, 1, 2, 0, 3, 0, 0\}}\label{deca__range__tables_8c_a91d7d60cff6a950d263730b3611360ed}
+
+\item 
+\hypertarget{deca__range__tables_8c_ae4d42e2d86dd2db023ee764f053ef70e}{const uint8 {\bfseries chan\-\_\-idxwb} \mbox{[}N\-U\-M\-\_\-\-C\-H\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\mbox{]} = \{0, 0, 0, 0, 0, 0, 0, 1\}}\label{deca__range__tables_8c_ae4d42e2d86dd2db023ee764f053ef70e}
+
+\item 
+\hypertarget{deca__range__tables_8c_a9c1e30be7c2f8c8b25da691bd03a1a5a}{const uint8 {\bfseries range25cm16\-P\-R\-Fnb} \mbox{[}4\mbox{]}\mbox{[}N\-U\-M\-\_\-16\-M\-\_\-\-O\-F\-F\-S\-E\-T\mbox{]}}\label{deca__range__tables_8c_a9c1e30be7c2f8c8b25da691bd03a1a5a}
+
+\item 
+\hypertarget{deca__range__tables_8c_ac73a55b87f0196ae7ecc8b8f19f8c829}{const uint8 {\bfseries range25cm16\-P\-R\-Fwb} \mbox{[}2\mbox{]}\mbox{[}N\-U\-M\-\_\-16\-M\-\_\-\-O\-F\-F\-S\-E\-T\-W\-B\mbox{]}}\label{deca__range__tables_8c_ac73a55b87f0196ae7ecc8b8f19f8c829}
+
+\item 
+\hypertarget{deca__range__tables_8c_a9d6cf67f560b68f0ffd286ac4e393ac0}{const uint8 {\bfseries range25cm64\-P\-R\-Fnb} \mbox{[}4\mbox{]}\mbox{[}N\-U\-M\-\_\-64\-M\-\_\-\-O\-F\-F\-S\-E\-T\mbox{]}}\label{deca__range__tables_8c_a9d6cf67f560b68f0ffd286ac4e393ac0}
+
+\item 
+\hypertarget{deca__range__tables_8c_ac19b98877793b9638fb9e2d23aa2bf7b}{const uint8 {\bfseries range25cm64\-P\-R\-Fwb} \mbox{[}2\mbox{]}\mbox{[}N\-U\-M\-\_\-64\-M\-\_\-\-O\-F\-F\-S\-E\-T\-W\-B\mbox{]}}\label{deca__range__tables_8c_ac19b98877793b9638fb9e2d23aa2bf7b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-W1000 range correction tables. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved. 
+
+\subsection{Function Documentation}
+\hypertarget{deca__range__tables_8c_a487fc43a9977f30cb4de00543a843bcc}{\index{deca\-\_\-range\-\_\-tables.\-c@{deca\-\_\-range\-\_\-tables.\-c}!dwt\-\_\-getrangebias@{dwt\-\_\-getrangebias}}
+\index{dwt\-\_\-getrangebias@{dwt\-\_\-getrangebias}!deca_range_tables.c@{deca\-\_\-range\-\_\-tables.\-c}}
+\subsubsection[{dwt\-\_\-getrangebias}]{\setlength{\rightskip}{0pt plus 5cm}double dwt\-\_\-getrangebias (
+\begin{DoxyParamCaption}
+\item[{uint8}]{chan, }
+\item[{float}]{range, }
+\item[{uint8}]{prf}
+\end{DoxyParamCaption}
+)}}\label{deca__range__tables_8c_a487fc43a9977f30cb4de00543a843bcc}
+
+
+ Function\-: \hyperlink{deca__range__tables_8c_a487fc43a9977f30cb4de00543a843bcc}{dwt\-\_\-getrangebias()}
+
+Description\-: This function is used to return the range bias correction need for T\-W\-R with D\-W1000 units.
+
+input parameters\-: 
+\begin{DoxyParams}{Parameters}
+{\em chan} & -\/ specifies the operating channel (e.\-g. 1, 2, 3, 4, 5, 6 or 7) \\
+\hline
+{\em range} & -\/ the calculated distance before correction \\
+\hline
+{\em prf} & -\/ this is the P\-R\-F e.\-g. D\-W\-T\-\_\-\-P\-R\-F\-\_\-16\-M or D\-W\-T\-\_\-\-P\-R\-F\-\_\-64\-M\\
+\hline
+\end{DoxyParams}
+output parameters
+
+returns correction needed in meters 

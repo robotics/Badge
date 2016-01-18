@@ -1,0 +1,61 @@
+\hypertarget{group__USBD__DESC__Private__Variables}{\section{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables}
+\label{group__USBD__DESC__Private__Variables}\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+U\-S\-B\-D\-\_\-\-D\-E\-V\-I\-C\-E {\bfseries U\-S\-R\-\_\-desc}
+\item 
+\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-B\-E\-G\-I\-N uint8\-\_\-t \\*
+U\-S\-B\-D\-\_\-\-Device\-Desc\mbox{[}U\-S\-B\-\_\-\-S\-I\-Z\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\mbox{]} {\bfseries \-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Variable Documentation}
+\hypertarget{group__USBD__DESC__Private__Variables_gaad0a5d155cbe499bb18a80f39f807a1c}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables}!\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D@{\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D}}
+\index{\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D@{\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D}!USBD_DESC_Private_Variables@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables}}
+\subsubsection[{\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-B\-E\-G\-I\-N uint8\-\_\-t U\-S\-B\-D\-\_\-\-Lang\-I\-D\-Desc \mbox{[}U\-S\-B\-\_\-\-S\-I\-Z\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-L\-A\-N\-G\-I\-D\mbox{]} \-\_\-\-\_\-\-A\-L\-I\-G\-N\-\_\-\-E\-N\-D}}\label{group__USBD__DESC__Private__Variables_gaad0a5d155cbe499bb18a80f39f807a1c}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+  \{
+    0x12,                       
+    USB\_DEVICE\_DESCRIPTOR\_TYPE, 
+    0x00,                       
+    0x02,
+    0x00,                       
+    0x00,                       
+    0x00,                       
+    USB\_OTG\_MAX\_EP0\_SIZE,      
+    LOBYTE(USBD\_VID),           
+    HIBYTE(USBD\_VID),           
+    LOBYTE(USBD\_PID),           
+    HIBYTE(USBD\_PID),           
+    0x00,                       
+    0x02,
+    USBD\_IDX\_MFC\_STR,           
+    USBD\_IDX\_PRODUCT\_STR,       
+    USBD\_IDX\_SERIAL\_STR,        
+    USBD\_CFG\_MAX\_NUM            
+  \}
+\end{DoxyCode}
+\hypertarget{group__USBD__DESC__Private__Variables_ga7b6c0e09bf9f913c610ff42bad814488}{\index{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables}!U\-S\-R\-\_\-desc@{U\-S\-R\-\_\-desc}}
+\index{U\-S\-R\-\_\-desc@{U\-S\-R\-\_\-desc}!USBD_DESC_Private_Variables@{U\-S\-B\-D\-\_\-\-D\-E\-S\-C\-\_\-\-Private\-\_\-\-Variables}}
+\subsubsection[{U\-S\-R\-\_\-desc}]{\setlength{\rightskip}{0pt plus 5cm}U\-S\-B\-D\-\_\-\-D\-E\-V\-I\-C\-E U\-S\-R\-\_\-desc}}\label{group__USBD__DESC__Private__Variables_ga7b6c0e09bf9f913c610ff42bad814488}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+  \hyperlink{group__USBD__DESC__Private__Functions_gadd5d311559f5cf53f393f9b863bd8aae}{USBD\_USR\_DeviceDescriptor},
+  \hyperlink{group__USBD__DESC__Private__Functions_gab5247caa36187728a45c43078d96497e}{USBD\_USR\_LangIDStrDescriptor}, 
+  \hyperlink{group__USBD__DESC__Private__Functions_gaeb4b6e96436cb53ade2b8276568c27d1}{USBD\_USR\_ManufacturerStrDescriptor},
+  \hyperlink{group__USBD__DESC__Private__Functions_ga3e9f418a2337898da999ca7548c414a9}{USBD\_USR\_ProductStrDescriptor},
+  \hyperlink{group__USBD__DESC__Private__Functions_ga61caa6dd47de36f32d25e2d6980e5904}{USBD\_USR\_SerialStrDescriptor},
+  \hyperlink{group__USBD__DESC__Private__Functions_ga1a95bda8d761cd993c82234e043270fc}{USBD\_USR\_ConfigStrDescriptor},
+  \hyperlink{group__USBD__DESC__Private__Functions_gaf7003c494f598dd781416da3e468e615}{USBD\_USR\_InterfaceStrDescriptor},
+  
+\}
+\end{DoxyCode}

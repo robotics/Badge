@@ -1,0 +1,68 @@
+\hypertarget{instance__calib_8c}{\section{src/application/instance\-\_\-calib.c File Reference}
+\label{instance__calib_8c}\index{src/application/instance\-\_\-calib.\-c@{src/application/instance\-\_\-calib.\-c}}
+}
+
+
+Deca\-Wave application level configuration and calibration functions.  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-device\-\_\-api.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}instance.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{instance__calib_8c_a3775748a9256916397c2748f15c81043}{int {\bfseries powertest} (void)}\label{instance__calib_8c_a3775748a9256916397c2748f15c81043}
+
+\item 
+\hypertarget{instance__calib_8c_a63c881be9fbea8e4ee8e7ad9d2a1a33c}{int {\bfseries instance\-\_\-startcwmode} (int chan)}\label{instance__calib_8c_a63c881be9fbea8e4ee8e7ad9d2a1a33c}
+
+\item 
+\hypertarget{instance__calib_8c_aca61c41970b1f425b02134389272fe11}{int {\bfseries instance\-\_\-starttxtest} (int frame\-Period)}\label{instance__calib_8c_aca61c41970b1f425b02134389272fe11}
+
+\item 
+\hypertarget{instance__calib_8c_ad8c8ec2d0f8f336d8284db867d24f810}{void {\bfseries xtalcalibration} (void)}\label{instance__calib_8c_ad8c8ec2d0f8f336d8284db867d24f810}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{instance__calib_8c_a8f66d457486c86ef20ab6de1ce972533}{const \hyperlink{structtx__struct}{tx\-\_\-struct} {\bfseries tx\-Spectrum\-Config} \mbox{[}8\mbox{]}}\label{instance__calib_8c_a8f66d457486c86ef20ab6de1ce972533}
+
+\item 
+const uint16 {\bfseries rf\-Delays} \mbox{[}2\mbox{]}
+\item 
+\hypertarget{instance__calib_8c_adc3b2d30f5233636901ab88545e129f7}{\hyperlink{structinstance__data__t}{instance\-\_\-data\-\_\-t} {\bfseries instance\-\_\-data} \mbox{[}N\-U\-M\-\_\-\-I\-N\-S\-T\mbox{]}}\label{instance__calib_8c_adc3b2d30f5233636901ab88545e129f7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Deca\-Wave application level configuration and calibration functions. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Variable Documentation}
+\hypertarget{instance__calib_8c_acc6b92eaf8a64212e529373921625981}{\index{instance\-\_\-calib.\-c@{instance\-\_\-calib.\-c}!rf\-Delays@{rf\-Delays}}
+\index{rf\-Delays@{rf\-Delays}!instance_calib.c@{instance\-\_\-calib.\-c}}
+\subsubsection[{rf\-Delays}]{\setlength{\rightskip}{0pt plus 5cm}const uint16 rf\-Delays\mbox{[}2\mbox{]}}}\label{instance__calib_8c_acc6b92eaf8a64212e529373921625981}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+        (uint16) ((DWT\_PRF\_16M\_RFDLY/ 2.0) * 1e-9 / \hyperlink{deca__device__api_8h_ad50a191c607cd51f94dadb15728c02f0}{DWT\_TIME\_UNITS}),
+        (uint16) ((DWT\_PRF\_64M\_RFDLY/ 2.0) * 1e-9 / \hyperlink{deca__device__api_8h_ad50a191c607cd51f94dadb15728c02f0}{DWT\_TIME\_UNITS})
+\}
+\end{DoxyCode}

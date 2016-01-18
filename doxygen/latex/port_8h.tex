@@ -1,0 +1,424 @@
+\hypertarget{port_8h}{\section{include/platform/port.h File Reference}
+\label{port_8h}\index{include/platform/port.\-h@{include/platform/port.\-h}}
+}
+
+
+H\-W specific definitions and functions for portability.  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stm32f10x.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{port_8h_a2e77a78412a89000c3b8a89f450f95f3}{\#define {\bfseries U\-S\-B\-\_\-\-S\-U\-P\-P\-O\-R\-T}}\label{port_8h_a2e77a78412a89000c3b8a89f450f95f3}
+
+\item 
+\hypertarget{port_8h_af57b905f605a7fe58fc009025fb3d30b}{\#define {\bfseries D\-M\-A\-\_\-\-E\-N\-A\-B\-L\-E}~(0)}\label{port_8h_af57b905f605a7fe58fc009025fb3d30b}
+
+\item 
+\hypertarget{port_8h_ab8c1b1225144ab6fac5beea4c688011c}{\#define {\bfseries writetospi}~\hyperlink{deca__spi_8c_aba7bf065506fc4fa01c7db8e3dc784ba}{writetospi\-\_\-serial}}\label{port_8h_ab8c1b1225144ab6fac5beea4c688011c}
+
+\item 
+\hypertarget{port_8h_a1c812ed79542e887c9ecb3ed576c64e2}{\#define {\bfseries readfromspi}~\hyperlink{deca__spi_8c_a2bba9ef938040f0842ed56371bb69160}{readfromspi\-\_\-serial}}\label{port_8h_a1c812ed79542e887c9ecb3ed576c64e2}
+
+\item 
+\hypertarget{port_8h_a1d8c82f991e64fbdd19d3466e332961c}{\#define {\bfseries S\-P\-Iy\-\_\-\-P\-R\-E\-S\-C\-A\-L\-E\-R}~S\-P\-I\-\_\-\-Baud\-Rate\-Prescaler\-\_\-128}\label{port_8h_a1d8c82f991e64fbdd19d3466e332961c}
+
+\item 
+\hypertarget{port_8h_a52af14cd6a80ecb901f009f5944724c8}{\#define {\bfseries S\-P\-Iy}~S\-P\-I2}\label{port_8h_a52af14cd6a80ecb901f009f5944724c8}
+
+\item 
+\hypertarget{port_8h_a6701cb51a25e8711786a30335dfc678e}{\#define {\bfseries S\-P\-Iy\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-B}\label{port_8h_a6701cb51a25e8711786a30335dfc678e}
+
+\item 
+\hypertarget{port_8h_a33b5194445b057bc1df18b386796b8b5}{\#define {\bfseries S\-P\-Iy\-\_\-\-C\-S}~G\-P\-I\-O\-\_\-\-Pin\-\_\-12}\label{port_8h_a33b5194445b057bc1df18b386796b8b5}
+
+\item 
+\hypertarget{port_8h_adc81a15ba8355e4abf8382374cbaa3c0}{\#define {\bfseries S\-P\-Iy\-\_\-\-C\-S\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-B}\label{port_8h_adc81a15ba8355e4abf8382374cbaa3c0}
+
+\item 
+\hypertarget{port_8h_a3badc79a06d1dd3562036ce21661a30e}{\#define {\bfseries S\-P\-Iy\-\_\-\-S\-C\-K}~G\-P\-I\-O\-\_\-\-Pin\-\_\-13}\label{port_8h_a3badc79a06d1dd3562036ce21661a30e}
+
+\item 
+\hypertarget{port_8h_ac9361c3e3c6f02af8a244ecfa634ad02}{\#define {\bfseries S\-P\-Iy\-\_\-\-M\-I\-S\-O}~G\-P\-I\-O\-\_\-\-Pin\-\_\-14}\label{port_8h_ac9361c3e3c6f02af8a244ecfa634ad02}
+
+\item 
+\hypertarget{port_8h_a4595ba0e16d523046793bdf310ad6981}{\#define {\bfseries S\-P\-Iy\-\_\-\-M\-O\-S\-I}~G\-P\-I\-O\-\_\-\-Pin\-\_\-15}\label{port_8h_a4595ba0e16d523046793bdf310ad6981}
+
+\item 
+\hypertarget{port_8h_a26089a10ddd59a0dc7283c19ccc02533}{\#define {\bfseries L\-C\-D\-\_\-\-R\-W}~G\-P\-I\-O\-\_\-\-Pin\-\_\-10}\label{port_8h_a26089a10ddd59a0dc7283c19ccc02533}
+
+\item 
+\hypertarget{port_8h_a4781e073871c6f27f89b9463ad3a4ed1}{\#define {\bfseries L\-C\-D\-\_\-\-R\-S}~G\-P\-I\-O\-\_\-\-Pin\-\_\-11}\label{port_8h_a4781e073871c6f27f89b9463ad3a4ed1}
+
+\item 
+\hypertarget{port_8h_ad6bf1cc810bb24754fc98bad60464b2d}{\#define {\bfseries S\-P\-Ix\-\_\-\-P\-R\-E\-S\-C\-A\-L\-E\-R}~S\-P\-I\-\_\-\-Baud\-Rate\-Prescaler\-\_\-8}\label{port_8h_ad6bf1cc810bb24754fc98bad60464b2d}
+
+\item 
+\hypertarget{port_8h_ab2ca34290f0a875f59c8eb5ab2bd68e1}{\#define {\bfseries S\-P\-Ix}~S\-P\-I1}\label{port_8h_ab2ca34290f0a875f59c8eb5ab2bd68e1}
+
+\item 
+\hypertarget{port_8h_aec83ebd29f11ee0dcadd4e3c5d0cb68c}{\#define {\bfseries S\-P\-Ix\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-A}\label{port_8h_aec83ebd29f11ee0dcadd4e3c5d0cb68c}
+
+\item 
+\hypertarget{port_8h_a00074c550b4bd251adf128c87071579b}{\#define {\bfseries S\-P\-Ix\-\_\-\-C\-S}~G\-P\-I\-O\-\_\-\-Pin\-\_\-4}\label{port_8h_a00074c550b4bd251adf128c87071579b}
+
+\item 
+\hypertarget{port_8h_ad291e71b7648b65de5f50deb457dbea1}{\#define {\bfseries S\-P\-Ix\-\_\-\-C\-S\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-A}\label{port_8h_ad291e71b7648b65de5f50deb457dbea1}
+
+\item 
+\hypertarget{port_8h_aa56c0a4b6a98f6dd5e93ce9b88c05096}{\#define {\bfseries S\-P\-Ix\-\_\-\-S\-C\-K}~G\-P\-I\-O\-\_\-\-Pin\-\_\-5}\label{port_8h_aa56c0a4b6a98f6dd5e93ce9b88c05096}
+
+\item 
+\hypertarget{port_8h_ae02306f450125b0bc8a6a1e2aef88108}{\#define {\bfseries S\-P\-Ix\-\_\-\-M\-I\-S\-O}~G\-P\-I\-O\-\_\-\-Pin\-\_\-6}\label{port_8h_ae02306f450125b0bc8a6a1e2aef88108}
+
+\item 
+\hypertarget{port_8h_a04a130c11f0168b42a2bd8135f4c98f8}{\#define {\bfseries S\-P\-Ix\-\_\-\-M\-O\-S\-I}~G\-P\-I\-O\-\_\-\-Pin\-\_\-7}\label{port_8h_a04a130c11f0168b42a2bd8135f4c98f8}
+
+\item 
+\hypertarget{port_8h_a4df65d5702b0b5bb45d78cfbaeac8104}{\#define {\bfseries D\-W1000\-\_\-\-R\-S\-Tn}~G\-P\-I\-O\-\_\-\-Pin\-\_\-0}\label{port_8h_a4df65d5702b0b5bb45d78cfbaeac8104}
+
+\item 
+\hypertarget{port_8h_afff3819956a7659982d717745d0d6fb9}{\#define {\bfseries D\-W1000\-\_\-\-R\-S\-Tn\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-A}\label{port_8h_afff3819956a7659982d717745d0d6fb9}
+
+\item 
+\hypertarget{port_8h_a91acf1b58baabc724a5a11a309a631c3}{\#define {\bfseries D\-E\-C\-A\-R\-S\-T\-I\-R\-Q}~G\-P\-I\-O\-\_\-\-Pin\-\_\-0}\label{port_8h_a91acf1b58baabc724a5a11a309a631c3}
+
+\item 
+\hypertarget{port_8h_a206aee5aadb3ab59c63e76f6147a0fc8}{\#define {\bfseries D\-E\-C\-A\-R\-S\-T\-I\-R\-Q\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-A}\label{port_8h_a206aee5aadb3ab59c63e76f6147a0fc8}
+
+\item 
+\hypertarget{port_8h_a34e8cf83aa2cfc541ceb47bb5db098fb}{\#define {\bfseries D\-E\-C\-A\-R\-S\-T\-I\-R\-Q\-\_\-\-E\-X\-T\-I}~E\-X\-T\-I\-\_\-\-Line0}\label{port_8h_a34e8cf83aa2cfc541ceb47bb5db098fb}
+
+\item 
+\hypertarget{port_8h_a6ca6a9bfc38967e6b29e6a2afd76110a}{\#define {\bfseries D\-E\-C\-A\-R\-S\-T\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-P\-O\-R\-T}~G\-P\-I\-O\-\_\-\-Port\-Source\-G\-P\-I\-O\-A}\label{port_8h_a6ca6a9bfc38967e6b29e6a2afd76110a}
+
+\item 
+\hypertarget{port_8h_ad69737ed198fdfb935c2d58ebc9e31b6}{\#define {\bfseries D\-E\-C\-A\-R\-S\-T\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-P\-I\-N}~G\-P\-I\-O\-\_\-\-Pin\-Source0}\label{port_8h_ad69737ed198fdfb935c2d58ebc9e31b6}
+
+\item 
+\hypertarget{port_8h_aef2e1580e35b8f42c725908d329fda1d}{\#define {\bfseries D\-E\-C\-A\-R\-S\-T\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-I\-R\-Qn}~E\-X\-T\-I0\-\_\-\-I\-R\-Qn}\label{port_8h_aef2e1580e35b8f42c725908d329fda1d}
+
+\item 
+\hypertarget{port_8h_a32ea7c652fb65486701a157a12a23f0d}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q}~G\-P\-I\-O\-\_\-\-Pin\-\_\-5}\label{port_8h_a32ea7c652fb65486701a157a12a23f0d}
+
+\item 
+\hypertarget{port_8h_a0c63d1b128b678750d0a11d54d738f80}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-B}\label{port_8h_a0c63d1b128b678750d0a11d54d738f80}
+
+\item 
+\hypertarget{port_8h_ab0a98d8ab73e71defc0d22fbf292c019}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I}~E\-X\-T\-I\-\_\-\-Line5}\label{port_8h_ab0a98d8ab73e71defc0d22fbf292c019}
+
+\item 
+\hypertarget{port_8h_a4177ee08613b35c61e680668fd2586de}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-P\-O\-R\-T}~G\-P\-I\-O\-\_\-\-Port\-Source\-G\-P\-I\-O\-B}\label{port_8h_a4177ee08613b35c61e680668fd2586de}
+
+\item 
+\hypertarget{port_8h_a55a829edd30f15fca18c212342effe4e}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-P\-I\-N}~G\-P\-I\-O\-\_\-\-Pin\-Source5}\label{port_8h_a55a829edd30f15fca18c212342effe4e}
+
+\item 
+\hypertarget{port_8h_a88b9fc2129fa6aa72c6784b220b3e818}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-I\-R\-Qn}~E\-X\-T\-I9\-\_\-5\-\_\-\-I\-R\-Qn}\label{port_8h_a88b9fc2129fa6aa72c6784b220b3e818}
+
+\item 
+\hypertarget{port_8h_a2b7706c65841e9e81632a4cbec220928}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-U\-S\-E\-I\-R\-Q}~E\-N\-A\-B\-L\-E}\label{port_8h_a2b7706c65841e9e81632a4cbec220928}
+
+\item 
+\hypertarget{port_8h_a7b6badc50540a64eba0cc7e1ee63d703}{\#define {\bfseries D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-N\-O\-I\-R\-Q}~D\-I\-S\-A\-B\-L\-E}\label{port_8h_a7b6badc50540a64eba0cc7e1ee63d703}
+
+\item 
+\hypertarget{port_8h_a6f7cabacc4389405bec14f4a3910f34b}{\#define {\bfseries T\-A\-\_\-\-B\-O\-O\-T1}~G\-P\-I\-O\-\_\-\-Pin\-\_\-2}\label{port_8h_a6f7cabacc4389405bec14f4a3910f34b}
+
+\item 
+\hypertarget{port_8h_aa3a065eafb9daf0cc592189c3f44d7d7}{\#define {\bfseries T\-A\-\_\-\-B\-O\-O\-T1\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-B}\label{port_8h_aa3a065eafb9daf0cc592189c3f44d7d7}
+
+\item 
+\hypertarget{port_8h_a9282b37004760965a186d3d9bf358c5b}{\#define {\bfseries T\-A\-\_\-\-R\-E\-S\-P\-\_\-\-D\-L\-Y}~G\-P\-I\-O\-\_\-\-Pin\-\_\-0}\label{port_8h_a9282b37004760965a186d3d9bf358c5b}
+
+\item 
+\hypertarget{port_8h_afdae7bcd52a28fe48b5e22fa2381cbb2}{\#define {\bfseries T\-A\-\_\-\-R\-E\-S\-P\-\_\-\-D\-L\-Y\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-C}\label{port_8h_afdae7bcd52a28fe48b5e22fa2381cbb2}
+
+\item 
+\hypertarget{port_8h_a168bf153d32cd723480becf52a33b58f}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-3}~G\-P\-I\-O\-\_\-\-Pin\-\_\-0}\label{port_8h_a168bf153d32cd723480becf52a33b58f}
+
+\item 
+\hypertarget{port_8h_a59fa957d8b002336bbae969fcdc81c16}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-4}~G\-P\-I\-O\-\_\-\-Pin\-\_\-1}\label{port_8h_a59fa957d8b002336bbae969fcdc81c16}
+
+\item 
+\hypertarget{port_8h_a97fdbf8575c9b1c5e3129f842340650a}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-5}~G\-P\-I\-O\-\_\-\-Pin\-\_\-2}\label{port_8h_a97fdbf8575c9b1c5e3129f842340650a}
+
+\item 
+\hypertarget{port_8h_aef7c4371475002aa0d0fa3ae6da00676}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-6}~G\-P\-I\-O\-\_\-\-Pin\-\_\-3}\label{port_8h_aef7c4371475002aa0d0fa3ae6da00676}
+
+\item 
+\hypertarget{port_8h_a06eef7358d0fe195de43143adc4b8bbd}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-7}~G\-P\-I\-O\-\_\-\-Pin\-\_\-4}\label{port_8h_a06eef7358d0fe195de43143adc4b8bbd}
+
+\item 
+\hypertarget{port_8h_a316ee071124fed3b89c7144f66455a09}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-8}~G\-P\-I\-O\-\_\-\-Pin\-\_\-5}\label{port_8h_a316ee071124fed3b89c7144f66455a09}
+
+\item 
+\hypertarget{port_8h_a49170d1b3cf1c7919e07473da308e81e}{\#define {\bfseries T\-A\-\_\-\-S\-W1\-\_\-\-G\-P\-I\-O}~G\-P\-I\-O\-C}\label{port_8h_a49170d1b3cf1c7919e07473da308e81e}
+
+\item 
+\hypertarget{port_8h_a86c0a4b40cdf5fb2b539fa037427a130}{\#define {\bfseries S1\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-O\-N}~(1)}\label{port_8h_a86c0a4b40cdf5fb2b539fa037427a130}
+
+\item 
+\hypertarget{port_8h_a15980caceccbdb78e6f41b505db7331c}{\#define {\bfseries S1\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-O\-F\-F}~(0)}\label{port_8h_a15980caceccbdb78e6f41b505db7331c}
+
+\item 
+\hypertarget{port_8h_a4b2f584f252749c56d398383a2c42bd9}{\#define {\bfseries port\-\_\-\-I\-S\-\_\-\-T\-A\-G\-\_\-pressed}()~is\-\_\-switch\-\_\-on(T\-A\-\_\-\-S\-W1\-\_\-4)}\label{port_8h_a4b2f584f252749c56d398383a2c42bd9}
+
+\item 
+\hypertarget{port_8h_adfd717ca7b970ea24948edeebd9f4b48}{\#define {\bfseries port\-\_\-\-I\-S\-\_\-\-L\-O\-N\-G\-D\-L\-Y\-\_\-pressed}()~is\-\_\-dlybutton\-\_\-low()}\label{port_8h_adfd717ca7b970ea24948edeebd9f4b48}
+
+\item 
+\hypertarget{port_8h_aea29ff83910db519b6c575b4e5a1db98}{\#define {\bfseries U\-S\-A\-R\-Tx}~U\-S\-A\-R\-T2}\label{port_8h_aea29ff83910db519b6c575b4e5a1db98}
+
+\item 
+\hypertarget{port_8h_a31db31608d0b1072f94a8a97a9fb7452}{\#define {\bfseries port\-\_\-\-U\-S\-A\-R\-Tx\-\_\-busy\-\_\-sending}()~0}\label{port_8h_a31db31608d0b1072f94a8a97a9fb7452}
+
+\item 
+\hypertarget{port_8h_a541b835e73b3ba3f25294dcd87a814d5}{\#define {\bfseries port\-\_\-\-U\-S\-A\-R\-Tx\-\_\-no\-\_\-data}()~0}\label{port_8h_a541b835e73b3ba3f25294dcd87a814d5}
+
+\item 
+\hypertarget{port_8h_a2509fd6e02881ff403865ceb5c72be3e}{\#define {\bfseries port\-\_\-\-U\-S\-A\-R\-Tx\-\_\-send\-\_\-data}(x)}\label{port_8h_a2509fd6e02881ff403865ceb5c72be3e}
+
+\item 
+\hypertarget{port_8h_a4bd9f3aaf742fde903add3537bc97578}{\#define {\bfseries port\-\_\-\-U\-S\-A\-R\-Tx\-\_\-receive\-\_\-data}()~0}\label{port_8h_a4bd9f3aaf742fde903add3537bc97578}
+
+\item 
+\hypertarget{port_8h_a2780a21da99841bb4c5fa594de9bd6ef}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-busy\-\_\-sending}()~(S\-P\-I\-\_\-\-I2\-S\-\_\-\-Get\-Flag\-Status((S\-P\-Ix),(S\-P\-I\-\_\-\-I2\-S\-\_\-\-F\-L\-A\-G\-\_\-\-T\-X\-E))==(R\-E\-S\-E\-T))}\label{port_8h_a2780a21da99841bb4c5fa594de9bd6ef}
+
+\item 
+\hypertarget{port_8h_a04f9c0226b2bf858b9949e509b5a1fb3}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-no\-\_\-data}()~(S\-P\-I\-\_\-\-I2\-S\-\_\-\-Get\-Flag\-Status((S\-P\-Ix),(S\-P\-I\-\_\-\-I2\-S\-\_\-\-F\-L\-A\-G\-\_\-\-R\-X\-N\-E))==(R\-E\-S\-E\-T))}\label{port_8h_a04f9c0226b2bf858b9949e509b5a1fb3}
+
+\item 
+\hypertarget{port_8h_a89825d1de913ea545ee8a1ea0bf07589}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-send\-\_\-data}(x)~S\-P\-I\-\_\-\-I2\-S\-\_\-\-Send\-Data((S\-P\-Ix),(x))}\label{port_8h_a89825d1de913ea545ee8a1ea0bf07589}
+
+\item 
+\hypertarget{port_8h_a284e9e60b6e01660cc35881decee0baa}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-receive\-\_\-data}()~S\-P\-I\-\_\-\-I2\-S\-\_\-\-Receive\-Data(S\-P\-Ix)}\label{port_8h_a284e9e60b6e01660cc35881decee0baa}
+
+\item 
+\hypertarget{port_8h_a083be31731403d77e9cff83fbd16fd39}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-disable}()~S\-P\-I\-\_\-\-Cmd(S\-P\-Ix,D\-I\-S\-A\-B\-L\-E)}\label{port_8h_a083be31731403d77e9cff83fbd16fd39}
+
+\item 
+\hypertarget{port_8h_a96c0c94348fb7c72322e56ff2e731500}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-enable}()~S\-P\-I\-\_\-\-Cmd(S\-P\-Ix,E\-N\-A\-B\-L\-E)}\label{port_8h_a96c0c94348fb7c72322e56ff2e731500}
+
+\item 
+\hypertarget{port_8h_a475a8c33a6ce647c7b255fdf6209c5a8}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-set\-\_\-chip\-\_\-select}()~G\-P\-I\-O\-\_\-\-Set\-Bits(S\-P\-Ix\-\_\-\-C\-S\-\_\-\-G\-P\-I\-O,S\-P\-Ix\-\_\-\-C\-S)}\label{port_8h_a475a8c33a6ce647c7b255fdf6209c5a8}
+
+\item 
+\hypertarget{port_8h_af9f6556abb49c066ecd76fce6893f492}{\#define {\bfseries port\-\_\-\-S\-P\-Ix\-\_\-clear\-\_\-chip\-\_\-select}()~G\-P\-I\-O\-\_\-\-Reset\-Bits(S\-P\-Ix\-\_\-\-C\-S\-\_\-\-G\-P\-I\-O,S\-P\-Ix\-\_\-\-C\-S)}\label{port_8h_af9f6556abb49c066ecd76fce6893f492}
+
+\item 
+\hypertarget{port_8h_af77665c39f0c22c0b0805018de19d1ff}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-busy\-\_\-sending}()~(S\-P\-I\-\_\-\-I2\-S\-\_\-\-Get\-Flag\-Status((S\-P\-Iy),(S\-P\-I\-\_\-\-I2\-S\-\_\-\-F\-L\-A\-G\-\_\-\-T\-X\-E))==(R\-E\-S\-E\-T))}\label{port_8h_af77665c39f0c22c0b0805018de19d1ff}
+
+\item 
+\hypertarget{port_8h_a58120385175210259bdcfc22d39df6fd}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-no\-\_\-data}()~(S\-P\-I\-\_\-\-I2\-S\-\_\-\-Get\-Flag\-Status((S\-P\-Iy),(S\-P\-I\-\_\-\-I2\-S\-\_\-\-F\-L\-A\-G\-\_\-\-R\-X\-N\-E))==(R\-E\-S\-E\-T))}\label{port_8h_a58120385175210259bdcfc22d39df6fd}
+
+\item 
+\hypertarget{port_8h_ae80fd81ac36beee23a192dcadc5fecb7}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-send\-\_\-data}(x)~S\-P\-I\-\_\-\-I2\-S\-\_\-\-Send\-Data((S\-P\-Iy),(x))}\label{port_8h_ae80fd81ac36beee23a192dcadc5fecb7}
+
+\item 
+\hypertarget{port_8h_a5359c1c1d2865d7a3d2d8dea11acad39}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-receive\-\_\-data}()~S\-P\-I\-\_\-\-I2\-S\-\_\-\-Receive\-Data(S\-P\-Iy)}\label{port_8h_a5359c1c1d2865d7a3d2d8dea11acad39}
+
+\item 
+\hypertarget{port_8h_aa9ac39e081d3b49e4660f9583bb35f46}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-disable}()~S\-P\-I\-\_\-\-Cmd(S\-P\-Iy,D\-I\-S\-A\-B\-L\-E)}\label{port_8h_aa9ac39e081d3b49e4660f9583bb35f46}
+
+\item 
+\hypertarget{port_8h_a7941fba951f0058b5c7371e5b6c87acc}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-enable}()~S\-P\-I\-\_\-\-Cmd(S\-P\-Iy,E\-N\-A\-B\-L\-E)}\label{port_8h_a7941fba951f0058b5c7371e5b6c87acc}
+
+\item 
+\hypertarget{port_8h_afbf181815c61460c48e1c0fc534365a1}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-set\-\_\-chip\-\_\-select}()~G\-P\-I\-O\-\_\-\-Set\-Bits(S\-P\-Iy\-\_\-\-C\-S\-\_\-\-G\-P\-I\-O,S\-P\-Iy\-\_\-\-C\-S)}\label{port_8h_afbf181815c61460c48e1c0fc534365a1}
+
+\item 
+\hypertarget{port_8h_a26a17a70f152ddbbd639c852f35686e9}{\#define {\bfseries port\-\_\-\-S\-P\-Iy\-\_\-clear\-\_\-chip\-\_\-select}()~G\-P\-I\-O\-\_\-\-Reset\-Bits(S\-P\-Iy\-\_\-\-C\-S\-\_\-\-G\-P\-I\-O,S\-P\-Iy\-\_\-\-C\-S)}\label{port_8h_a26a17a70f152ddbbd639c852f35686e9}
+
+\item 
+\hypertarget{port_8h_a882245eb3982002e536aac36ef5554e2}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-R\-S\-\_\-set}()~G\-P\-I\-O\-\_\-\-Set\-Bits(S\-P\-Iy\-\_\-\-G\-P\-I\-O,L\-C\-D\-\_\-\-R\-S)}\label{port_8h_a882245eb3982002e536aac36ef5554e2}
+
+\item 
+\hypertarget{port_8h_ab7f8493ad1cff2d8e0878d21d4038474}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-R\-S\-\_\-clear}()~G\-P\-I\-O\-\_\-\-Reset\-Bits(S\-P\-Iy\-\_\-\-G\-P\-I\-O,L\-C\-D\-\_\-\-R\-S)}\label{port_8h_ab7f8493ad1cff2d8e0878d21d4038474}
+
+\item 
+\hypertarget{port_8h_aceb1c1c5602eef450460e3366f633483}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-R\-W\-\_\-set}()~G\-P\-I\-O\-\_\-\-Set\-Bits(S\-P\-Iy\-\_\-\-G\-P\-I\-O,L\-C\-D\-\_\-\-R\-W)}\label{port_8h_aceb1c1c5602eef450460e3366f633483}
+
+\item 
+\hypertarget{port_8h_a39f3be57fafa67aa0d83c90686717c81}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-R\-W\-\_\-clear}()~G\-P\-I\-O\-\_\-\-Reset\-Bits(S\-P\-Iy\-\_\-\-G\-P\-I\-O,L\-C\-D\-\_\-\-R\-W)}\label{port_8h_a39f3be57fafa67aa0d83c90686717c81}
+
+\item 
+\hypertarget{port_8h_abf6a8c5b6b3a9e7ca1e8e3eab35fbd17}{\#define {\bfseries port\-\_\-\-G\-E\-T\-\_\-stack\-\_\-pointer}()~\-\_\-\-\_\-get\-\_\-\-M\-S\-P()}\label{port_8h_abf6a8c5b6b3a9e7ca1e8e3eab35fbd17}
+
+\item 
+\hypertarget{port_8h_a3f1abe54d16eb32464cd510a5d4caacd}{\#define {\bfseries port\-\_\-\-G\-E\-T\-\_\-rtc\-\_\-time}()~R\-T\-C\-\_\-\-Get\-Counter()}\label{port_8h_a3f1abe54d16eb32464cd510a5d4caacd}
+
+\item 
+\hypertarget{port_8h_ab3ea24066a24abda791675e1b582d239}{\#define {\bfseries port\-\_\-\-S\-E\-T\-\_\-rtc\-\_\-time}(x)~R\-T\-C\-\_\-\-Set\-Counter(x)}\label{port_8h_ab3ea24066a24abda791675e1b582d239}
+
+\item 
+\hypertarget{port_8h_a78fa9d3f6ad8968b121e78872a3a2cd5}{\#define {\bfseries port\-\_\-\-Get\-E\-X\-T\-\_\-\-I\-R\-Q\-Status}()~\hyperlink{port_8c_a379cc65940ceb03631595e953d1f2729}{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}(D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-I\-R\-Qn)}\label{port_8h_a78fa9d3f6ad8968b121e78872a3a2cd5}
+
+\item 
+\hypertarget{port_8h_aba34b7bbd87406d0ccc284ab600a1fab}{\#define {\bfseries port\-\_\-\-Disable\-E\-X\-T\-\_\-\-I\-R\-Q}()~N\-V\-I\-C\-\_\-\-Disable\-I\-R\-Q(D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-I\-R\-Qn)}\label{port_8h_aba34b7bbd87406d0ccc284ab600a1fab}
+
+\item 
+\hypertarget{port_8h_a89f4e2e601bdf464c9479680da59d870}{\#define {\bfseries port\-\_\-\-Enable\-E\-X\-T\-\_\-\-I\-R\-Q}()~N\-V\-I\-C\-\_\-\-Enable\-I\-R\-Q(D\-E\-C\-A\-I\-R\-Q\-\_\-\-E\-X\-T\-I\-\_\-\-I\-R\-Qn)}\label{port_8h_a89f4e2e601bdf464c9479680da59d870}
+
+\item 
+\hypertarget{port_8h_a3201b6643c62d527bd201ef0dc0f98ef}{\#define {\bfseries port\-\_\-\-Check\-E\-X\-T\-\_\-\-I\-R\-Q}()~G\-P\-I\-O\-\_\-\-Read\-Input\-Data\-Bit(D\-E\-C\-A\-I\-R\-Q\-\_\-\-G\-P\-I\-O, D\-E\-C\-A\-I\-R\-Q)}\label{port_8h_a3201b6643c62d527bd201ef0dc0f98ef}
+
+\item 
+\hypertarget{port_8h_abd8d6ef2cea3e680a472ea0ea3ee297f}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-Clear}(x)~0}\label{port_8h_abd8d6ef2cea3e680a472ea0ea3ee297f}
+
+\item 
+\hypertarget{port_8h_a44e14bcb729d07a9b8b2074e7e34adbd}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-Set\-Back\-Color}(x)~0}\label{port_8h_a44e14bcb729d07a9b8b2074e7e34adbd}
+
+\item 
+\hypertarget{port_8h_aaa93a01cc7f58f16dc50ac5cac415735}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-Set\-Text\-Color}(x)~0}\label{port_8h_aaa93a01cc7f58f16dc50ac5cac415735}
+
+\item 
+\hypertarget{port_8h_a54d902c875960a85b5f032997ab46dd2}{\#define {\bfseries port\-\_\-\-L\-C\-D\-\_\-\-Display\-String}(line, column, font\-\_\-index, buffer)~0}\label{port_8h_a54d902c875960a85b5f032997ab46dd2}
+
+\item 
+\hypertarget{port_8h_aa9cb5d004f05b67d71d153c114f0bb0b}{\#define {\bfseries is\-\_\-button\-\_\-high}(x)~0}\label{port_8h_aa9cb5d004f05b67d71d153c114f0bb0b}
+
+\item 
+\hypertarget{port_8h_aa21dc3e4f84e6c9424d48ab1e066f773}{\#define {\bfseries gpio\-\_\-set}(x)~0}\label{port_8h_aa21dc3e4f84e6c9424d48ab1e066f773}
+
+\item 
+\hypertarget{port_8h_a93aaf85e98ca47bb50088dab057dfa84}{\#define {\bfseries gpio\-\_\-reset}(x)~0}\label{port_8h_a93aaf85e98ca47bb50088dab057dfa84}
+
+\item 
+\hypertarget{port_8h_a793187391f3a202c5ec6690b86580041}{\#define {\bfseries is\-\_\-gpio\-\_\-out\-\_\-low}(x)~0}\label{port_8h_a793187391f3a202c5ec6690b86580041}
+
+\item 
+\hypertarget{port_8h_ac01fb8dd38a0ce9b99ee77c09875ae83}{\#define {\bfseries is\-\_\-gpio\-\_\-out\-\_\-high}(x)~0}\label{port_8h_ac01fb8dd38a0ce9b99ee77c09875ae83}
+
+\item 
+\hypertarget{port_8h_aeca331c14045a8a979abfa09e75b16b6}{\#define {\bfseries port\-Get\-Tick\-Count}()~port\-Get\-Tick\-Cnt()}\label{port_8h_aeca331c14045a8a979abfa09e75b16b6}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries led\-\_\-t} \{ \\*
+{\bfseries L\-E\-D\-\_\-\-P\-C6}, 
+{\bfseries L\-E\-D\-\_\-\-P\-C7}, 
+{\bfseries L\-E\-D\-\_\-\-P\-C8}, 
+{\bfseries L\-E\-D\-\_\-\-P\-C9}, 
+\\*
+{\bfseries L\-E\-D\-\_\-\-A\-L\-L}, 
+{\bfseries L\-E\-Dn}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{port_8h_a665ae6342a3eb87f652ea6e0679fe161}{void {\bfseries printf2} (const char $\ast$format,...)}\label{port_8h_a665ae6342a3eb87f652ea6e0679fe161}
+
+\item 
+\hypertarget{port_8h_ae6f3721a690837fb2c2e2eee22740cd3}{int {\bfseries writetospi\-\_\-serial} (uint16\-\_\-t header\-Length, const uint8\-\_\-t $\ast$header\-Buffer, uint32\-\_\-t bodylength, const uint8\-\_\-t $\ast$body\-Buffer)}\label{port_8h_ae6f3721a690837fb2c2e2eee22740cd3}
+
+\item 
+\hypertarget{port_8h_af7402cbdeb54ba8fbd6a045e3ce1163b}{int {\bfseries readfromspi\-\_\-serial} (uint16\-\_\-t header\-Length, const uint8\-\_\-t $\ast$header\-Buffer, uint32\-\_\-t readlength, uint8\-\_\-t $\ast$read\-Buffer)}\label{port_8h_af7402cbdeb54ba8fbd6a045e3ce1163b}
+
+\item 
+\hypertarget{port_8h_a52a17c008c82f416cf1b0c2852c071f4}{int {\bfseries is\-\_\-switch\-\_\-on} (uint16\-\_\-t G\-P\-I\-Opin)}\label{port_8h_a52a17c008c82f416cf1b0c2852c071f4}
+
+\item 
+I\-T\-Status \hyperlink{port_8h_abf5d99b88521c06c3c5a7d5a4cfa4215}{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status} (uint32\-\_\-t x)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified E\-X\-T\-I line is enabled or not. \end{DoxyCompactList}\item 
+\hypertarget{port_8h_a2fe067d596641f3882af567482b459e6}{int {\bfseries N\-V\-I\-C\-\_\-\-Disable\-D\-E\-C\-A\-I\-R\-Q} (void)}\label{port_8h_a2fe067d596641f3882af567482b459e6}
+
+\item 
+\hypertarget{port_8h_a6b1018cd2d4ec28396bd48ea8b0182cc}{void \-\_\-\-\_\-weak {\bfseries process\-\_\-deca\-\_\-irq} (void)}\label{port_8h_a6b1018cd2d4ec28396bd48ea8b0182cc}
+
+\item 
+\hypertarget{port_8h_ad6fcb57fb5be4c8187545cb025017070}{int {\bfseries is\-\_\-\-I\-R\-Q\-\_\-enabled} (void)}\label{port_8h_ad6fcb57fb5be4c8187545cb025017070}
+
+\item 
+\hypertarget{port_8h_a1a85f40d0e72011b8919f084675591bc}{int {\bfseries is\-\_\-button\-\_\-low} (uint16\-\_\-t G\-P\-I\-Opin)}\label{port_8h_a1a85f40d0e72011b8919f084675591bc}
+
+\item 
+\hypertarget{port_8h_a1ac9f320b49d0895feedb41404c4a377}{void {\bfseries led\-\_\-on} (led\-\_\-t led)}\label{port_8h_a1ac9f320b49d0895feedb41404c4a377}
+
+\item 
+\hypertarget{port_8h_a5d808866768445dd5078f4bc650bfc01}{void {\bfseries led\-\_\-off} (led\-\_\-t led)}\label{port_8h_a5d808866768445dd5078f4bc650bfc01}
+
+\item 
+\hypertarget{port_8h_a110190c5cfbec6b1dfb913f4f55a2249}{int {\bfseries peripherals\-\_\-init} (void)}\label{port_8h_a110190c5cfbec6b1dfb913f4f55a2249}
+
+\item 
+\hypertarget{port_8h_a857414e257650d1de7dffd14c053f922}{void {\bfseries spi\-\_\-peripheral\-\_\-init} (void)}\label{port_8h_a857414e257650d1de7dffd14c053f922}
+
+\item 
+\hypertarget{port_8h_a76511b9eccfa5fbfbcb057dc578b7a0a}{void {\bfseries S\-P\-I\-\_\-\-Change\-Rate} (uint16\-\_\-t scalingfactor)}\label{port_8h_a76511b9eccfa5fbfbcb057dc578b7a0a}
+
+\item 
+\hypertarget{port_8h_a9b94752a2b28d7b481d2ddc37ea27204}{void {\bfseries S\-P\-I\-\_\-\-Config\-Fast\-Rate} (uint16\-\_\-t scalingfactor)}\label{port_8h_a9b94752a2b28d7b481d2ddc37ea27204}
+
+\item 
+\hypertarget{port_8h_ab2cda3f116f8e3cad924aa30ef3a6f10}{unsigned long {\bfseries port\-Get\-Tick\-Cnt} (void)}\label{port_8h_ab2cda3f116f8e3cad924aa30ef3a6f10}
+
+\item 
+\hypertarget{port_8h_aab5c3e0da0d88b352e2c69a830c8c27f}{void {\bfseries reset\-\_\-\-D\-W1000} (void)}\label{port_8h_aab5c3e0da0d88b352e2c69a830c8c27f}
+
+\item 
+\hypertarget{port_8h_a51b6136902f21237d61b2f51ab9f62f3}{void {\bfseries setup\-\_\-\-D\-W1000\-R\-S\-Tn\-I\-R\-Q} (int enable)}\label{port_8h_a51b6136902f21237d61b2f51ab9f62f3}
+
+\item 
+void \hyperlink{port_8h_a482118951315b57e3a3bfbb5c704d8a2}{process\-\_\-dw\-R\-S\-Tn\-\_\-irq} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\-W specific definitions and functions for portability. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{port_8h_abf5d99b88521c06c3c5a7d5a4cfa4215}{\index{port.\-h@{port.\-h}!E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status@{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}}
+\index{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status@{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}!port.h@{port.\-h}}
+\subsubsection[{E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status}]{\setlength{\rightskip}{0pt plus 5cm}I\-T\-Status E\-X\-T\-I\-\_\-\-Get\-I\-T\-En\-Status (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{E\-X\-T\-I\-\_\-\-Line}
+\end{DoxyParamCaption}
+)}}\label{port_8h_abf5d99b88521c06c3c5a7d5a4cfa4215}
+
+
+Checks whether the specified E\-X\-T\-I line is enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em E\-X\-T\-I\-\_\-\-Line} & specifies the E\-X\-T\-I line to check. This parameter can be\-: \begin{DoxyItemize}
+\item E\-X\-T\-I\-\_\-\-Linex\-: External interrupt line x where x(0..19) \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & \char`\"{}enable\char`\"{} state of E\-X\-T\-I\-\_\-\-Line (S\-E\-T or R\-E\-S\-E\-T). \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{port_8h_a482118951315b57e3a3bfbb5c704d8a2}{\index{port.\-h@{port.\-h}!process\-\_\-dw\-R\-S\-Tn\-\_\-irq@{process\-\_\-dw\-R\-S\-Tn\-\_\-irq}}
+\index{process\-\_\-dw\-R\-S\-Tn\-\_\-irq@{process\-\_\-dw\-R\-S\-Tn\-\_\-irq}!port.h@{port.\-h}}
+\subsubsection[{process\-\_\-dw\-R\-S\-Tn\-\_\-irq}]{\setlength{\rightskip}{0pt plus 5cm}void process\-\_\-dw\-R\-S\-Tn\-\_\-irq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{port_8h_a482118951315b57e3a3bfbb5c704d8a2}
+===========================================================================
+
+Abstract\-: main program 
+
+ 

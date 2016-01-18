@@ -10,10 +10,10 @@
  *
  * @author DecaWave
  */
-#include "compiler.h"
-#include "deca_device_api.h"
-#include "instance.h"
-#include "port.h"
+#include "compiler/compiler.h"
+#include "decadriver/deca_device_api.h"
+#include "application/instance.h"
+#include "platform/port.h"
 
 // -------------------------------------------------------------------------------------------------------------------
 

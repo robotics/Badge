@@ -14,6 +14,7 @@
 #include "deca_spi.h"
 #include "deca_device_api.h"
 #include "port.h"
+#include <util/atomic.h>
 
 
 int writetospi_serial( uint16 headerLength,
@@ -48,10 +49,6 @@ int openspi(/*SPI_TypeDef* SPIx*/)
  */
 int closespi(void)
 {
-	while (port_SPIx_busy_sending()); //wait for tx buffer to empty
-
-	port_SPIx_disable();
-
 	return 0;
 
 } // end closespi()
@@ -64,46 +61,23 @@ int closespi(void)
  * returns 0 for success, or -1 for error
  */
 #pragma GCC optimize ("O3")
-int writetospi_serial
-(
-    uint16       headerLength,
-    const uint8 *headerBuffer,
-    uint32       bodylength,
-    const uint8 *bodyBuffer
-)
-{
-
-	int i=0;
-
-    decaIrqStatus_t  stat ;
-
-    stat = decamutexon() ;
-
-    SPIx_CS_GPIO->BRR = SPIx_CS;
-
+int writetospi_serial(uint16 headerLength, const uint8 *headerBuffer, uint32 bodylength, const uint8 *bodyBuffer) {
+  int i=0;
+  ATOMIC_BLOCK(ATOMIC_FORCEON) {
     for(i=0; i<headerLength; i++)
     {
-    	SPIx->DR = headerBuffer[i];
-
-    	while ((SPIx->SR & SPI_I2S_FLAG_RXNE) == (uint16_t)RESET);
-
-    	SPIx->DR ;
+      SPDR = headerBuffer[i];
+      while (!(SPSR & (1<<SPIF)));
+      SPDR;
     }
-
     for(i=0; i<bodylength; i++)
     {
-     	SPIx->DR = bodyBuffer[i];
-
-    	while((SPIx->SR & SPI_I2S_FLAG_RXNE) == (uint16_t)RESET);
-
-		SPIx->DR ;
-	}
-
-    SPIx_CS_GPIO->BSRR = SPIx_CS;
-
-    decamutexoff(stat) ;
-
-    return 0;
+      SPDR = bodyBuffer[i];
+      while (!(SPSR & (1<<SPIF)));
+      SPDR;
+    }
+  }
+  return 0;
 } // end writetospi()
 
 
@@ -116,102 +90,23 @@ int writetospi_serial
  * or returns -1 if there was an error
  */
 #pragma GCC optimize ("O3")
-int readfromspi_serial
-(
-    uint16       headerLength,
-    const uint8 *headerBuffer,
-    uint32       readlength,
-    uint8       *readBuffer
-)
-{
-
-	int i=0;
-
-    decaIrqStatus_t  stat ;
-
-    stat = decamutexon() ;
-
-    /* Wait for SPIx Tx buffer empty */
-    //while (port_SPIx_busy_sending());
-
-    SPIx_CS_GPIO->BRR = SPIx_CS;
-
+int readfromspi_serial(uint16 headerLength, const uint8 *headerBuffer, uint32 readlength, uint8 *readBuffer) {
+  int i=0;
+  ATOMIC_BLOCK(ATOMIC_FORCEON) {
     for(i=0; i<headerLength; i++)
     {
-    	SPIx->DR = headerBuffer[i];
-
-     	while((SPIx->SR & SPI_I2S_FLAG_RXNE) == (uint16_t)RESET);
-
-     	readBuffer[0] = SPIx->DR ; // Dummy read as we write the header
+      SPDR = headerBuffer[i];
+      while(!(SPSR & (1<<SPIF)));
+      readBuffer[0] = SPDR ; // Dummy read as we write the header
     }
 
     for(i=0; i<readlength; i++)
     {
-    	SPIx->DR = 0;  // Dummy write as we read the message body
-
-    	while((SPIx->SR & SPI_I2S_FLAG_RXNE) == (uint16_t)RESET);
- 
-	   	readBuffer[i] = SPIx->DR ;//port_SPIx_receive_data(); //this clears RXNE bit
+      SPDR = 0;  // Dummy write as we read the message body
+      while(!(SPSR & (1<<SPIF)));
+      readBuffer[i] = SPDR ;//port_SPIx_receive_data(); //this clears RXNE bit
     }
-
-    SPIx_CS_GPIO->BSRR = SPIx_CS;
-
-    decamutexoff(stat) ;
-
-    return 0;
+  }
+  return 0;
 } // end readfromspi()
 
-#if (EVB1000_LCD_SUPPORT == 1)
-
-void writetoLCD
-(
-    uint32       bodylength,
-    uint8        rs_enable,
-    const uint8 *bodyBuffer
-)
-{
-
-	int i = 0;
-	int sleep = 0;
-	//int j = 10000;
-
-	if(rs_enable)
-	{
-    	port_LCD_RS_set();
-    }
-	else
-	{
-		if(bodylength == 1)
-		{
-			if(bodyBuffer[0] & 0x3) //if this is command = 1 or 2 - exsecution time is > 1ms
-				sleep = 1 ;
-		}
-    	port_LCD_RS_clear();
-    }
-
-    port_SPIy_clear_chip_select();  //CS low
-
-
-    //while(j--); //delay
-
-    for(i=0; i<bodylength; i++)
-    {
-		port_SPIy_send_data(bodyBuffer[i]); //send data on the SPI
-
-		while (port_SPIy_no_data()); //wait for rx buffer to fill
-
-		port_SPIy_receive_data(); //this clears RXNE bit
-	}
-
-    //j = 10000;
-
-    port_LCD_RS_clear();
-
-    //while(j--); //delay
-
-    port_SPIy_set_chip_select();  //CS high
-
-    if(sleep)
-    	Sleep(2);
-} // end writetoLCD()
-#endif

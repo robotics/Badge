@@ -1,0 +1,63 @@
+\hypertarget{structevent__data__t}{\section{event\-\_\-data\-\_\-t Struct Reference}
+\label{structevent__data__t}\index{event\-\_\-data\-\_\-t@{event\-\_\-data\-\_\-t}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structevent__data__t_ad27ad39a57e07b9f327bb60867a33037}{uint8 {\bfseries type}}\label{structevent__data__t_ad27ad39a57e07b9f327bb60867a33037}
+
+\item 
+\hypertarget{structevent__data__t_a2989c9e9712023a801153a60db2aeb83}{uint8 {\bfseries type2}}\label{structevent__data__t_a2989c9e9712023a801153a60db2aeb83}
+
+\item 
+\hypertarget{structevent__data__t_ad5a0dda59be22c0231dc95bd0697ac64}{uint8 {\bfseries type3}}\label{structevent__data__t_ad5a0dda59be22c0231dc95bd0697ac64}
+
+\item 
+\hypertarget{structevent__data__t_a5699cea64aa6a2d764bf55e0e39ad4e2}{uint16 {\bfseries rx\-Length}}\label{structevent__data__t_a5699cea64aa6a2d764bf55e0e39ad4e2}
+
+\item 
+\hypertarget{structevent__data__t_a1452c936afb030abb3fe9df0af5ea045}{uint64 {\bfseries time\-Stamp}}\label{structevent__data__t_a1452c936afb030abb3fe9df0af5ea045}
+
+\item 
+\hypertarget{structevent__data__t_a3c25626381670a6b48d7da7c8705cfb6}{uint32 {\bfseries time\-Stamp32l}}\label{structevent__data__t_a3c25626381670a6b48d7da7c8705cfb6}
+
+\item 
+\hypertarget{structevent__data__t_a776641ab6397a24d75922be171ad66e8}{uint32 {\bfseries time\-Stamp32h}}\label{structevent__data__t_a776641ab6397a24d75922be171ad66e8}
+
+\item 
+\hypertarget{structevent__data__t_a41cc6c86b4308701dd5cd2111dc2f375}{\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{unionevent__data__t_1_1@2_a187be39ed3f72ed3501d55c4a04b5f27}{\>uint8 {\bfseries frame} \mbox{[}STANDARD\_FRAME\_SIZE\mbox{]}\\
+\hypertarget{unionevent__data__t_1_1@2_a47db759d399f677e63accceec5e92192}{\>\hyperlink{structsrd__msg__dlsl}{srd\_msg\_dlsl} {\bfseries rxmsg\_ll}\\
+\hypertarget{unionevent__data__t_1_1@2_a3f44a9a6224261872cbb694911e0464e}{\>\hyperlink{structsrd__msg__dssl}{srd\_msg\_dssl} {\bfseries rxmsg\_sl}\\
+\hypertarget{unionevent__data__t_1_1@2_ac760081f1f4df83bd226e0ccec6e8145}{\>\hyperlink{structsrd__msg__dlss}{srd\_msg\_dlss} {\bfseries rxmsg\_ls}\\
+\hypertarget{unionevent__data__t_1_1@2_aafb94785a6bfaaed12810d338f37b5d0}{\>\hyperlink{structsrd__msg__dsss}{srd\_msg\_dsss} {\bfseries rxmsg\_ss}\\
+\hypertarget{unionevent__data__t_1_1@2_acd9284ed389a8e0fadd84070aa10c476}{\>\hyperlink{structack__msg}{ack\_msg} {\bfseries rxackmsg}\\
+\hypertarget{unionevent__data__t_1_1@2_a074cfbf3561ca1f435a7e3cf6db2680d}{\>\hyperlink{structiso__IEEE__EUI64__blink__msg}{iso\_IEEE\_EUI64\_blink\_msg} {\bfseries rxblinkmsg}\\
+\hypertarget{unionevent__data__t_1_1@2_ae7234eb58d36fd53cc53b7435533b959}{\>\hyperlink{structiso__IEEE__EUI64__blinkdw__msg}{iso\_IEEE\_EUI64\_blinkdw\_msg} {\bfseries rxblinkmsgdw}\\
+\} {\bfseries msgu}}\label{structevent__data__t_a41cc6c86b4308701dd5cd2111dc2f375}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structevent__data__t_a79782dae7b19863946ca12e23a8832c5}{\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{unionevent__data__t_1_1@6_a187be39ed3f72ed3501d55c4a04b5f27}{\>uint8 {\bfseries frame} \mbox{[}STANDARD\_FRAME\_SIZE\mbox{]}\\
+\hypertarget{unionevent__data__t_1_1@6_a47db759d399f677e63accceec5e92192}{\>\hyperlink{structsrd__msg__dlsl}{srd\_msg\_dlsl} {\bfseries rxmsg\_ll}\\
+\hypertarget{unionevent__data__t_1_1@6_a3f44a9a6224261872cbb694911e0464e}{\>\hyperlink{structsrd__msg__dssl}{srd\_msg\_dssl} {\bfseries rxmsg\_sl}\\
+\hypertarget{unionevent__data__t_1_1@6_ac760081f1f4df83bd226e0ccec6e8145}{\>\hyperlink{structsrd__msg__dlss}{srd\_msg\_dlss} {\bfseries rxmsg\_ls}\\
+\hypertarget{unionevent__data__t_1_1@6_aafb94785a6bfaaed12810d338f37b5d0}{\>\hyperlink{structsrd__msg__dsss}{srd\_msg\_dsss} {\bfseries rxmsg\_ss}\\
+\hypertarget{unionevent__data__t_1_1@6_acd9284ed389a8e0fadd84070aa10c476}{\>\hyperlink{structack__msg}{ack\_msg} {\bfseries rxackmsg}\\
+\hypertarget{unionevent__data__t_1_1@6_a074cfbf3561ca1f435a7e3cf6db2680d}{\>\hyperlink{structiso__IEEE__EUI64__blink__msg}{iso\_IEEE\_EUI64\_blink\_msg} {\bfseries rxblinkmsg}\\
+\hypertarget{unionevent__data__t_1_1@6_ae7234eb58d36fd53cc53b7435533b959}{\>\hyperlink{structiso__IEEE__EUI64__blinkdw__msg}{iso\_IEEE\_EUI64\_blinkdw\_msg} {\bfseries rxblinkmsgdw}\\
+\} {\bfseries msgu}}\label{structevent__data__t_a79782dae7b19863946ca12e23a8832c5}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/application/\hyperlink{instance_8h}{instance.\-h}\item 
+include/application/lib.\-h\end{DoxyCompactItemize}

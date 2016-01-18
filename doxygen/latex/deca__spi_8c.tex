@@ -1,0 +1,94 @@
+\hypertarget{deca__spi_8c}{\section{src/platform/deca\-\_\-spi.c File Reference}
+\label{deca__spi_8c}\index{src/platform/deca\-\_\-spi.\-c@{src/platform/deca\-\_\-spi.\-c}}
+}
+
+
+S\-P\-I access functions.  
+
+
+{\ttfamily \#include \char`\"{}deca\-\_\-spi.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-device\-\_\-api.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$util/atomic.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{deca__spi_8c_aba7bf065506fc4fa01c7db8e3dc784ba}{writetospi\-\_\-serial} (uint16 header\-Length, const uint8 $\ast$header\-Buffer, uint32 bodylength, const uint8 $\ast$body\-Buffer)
+\item 
+int \hyperlink{deca__spi_8c_a2bba9ef938040f0842ed56371bb69160}{readfromspi\-\_\-serial} (uint16 header\-Length, const uint8 $\ast$header\-Buffer, uint32 readlength, uint8 $\ast$read\-Buffer)
+\item 
+int \hyperlink{deca__spi_8c_a21935430e81a20bb6e28bdb6cd2d0b6f}{openspi} ()
+\item 
+int \hyperlink{deca__spi_8c_a7e04e65f1d3077bb9f263584d43f78a2}{closespi} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\-P\-I access functions. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{deca__spi_8c_a7e04e65f1d3077bb9f263584d43f78a2}{\index{deca\-\_\-spi.\-c@{deca\-\_\-spi.\-c}!closespi@{closespi}}
+\index{closespi@{closespi}!deca_spi.c@{deca\-\_\-spi.\-c}}
+\subsubsection[{closespi}]{\setlength{\rightskip}{0pt plus 5cm}int closespi (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8c_a7e04e65f1d3077bb9f263584d43f78a2}
+
+
+ Function\-: \hyperlink{deca__spi_8c_a7e04e65f1d3077bb9f263584d43f78a2}{closespi()}
+
+Low level abstract function to close the the S\-P\-I device. returns 0 for success, or -\/1 for error \hypertarget{deca__spi_8c_a21935430e81a20bb6e28bdb6cd2d0b6f}{\index{deca\-\_\-spi.\-c@{deca\-\_\-spi.\-c}!openspi@{openspi}}
+\index{openspi@{openspi}!deca_spi.c@{deca\-\_\-spi.\-c}}
+\subsubsection[{openspi}]{\setlength{\rightskip}{0pt plus 5cm}int openspi (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8c_a21935430e81a20bb6e28bdb6cd2d0b6f}
+
+
+ Function\-: \hyperlink{deca__spi_8c_a21935430e81a20bb6e28bdb6cd2d0b6f}{openspi()}
+
+Low level abstract function to open and initialise access to the S\-P\-I device. returns 0 for success, or -\/1 for error \hypertarget{deca__spi_8c_a2bba9ef938040f0842ed56371bb69160}{\index{deca\-\_\-spi.\-c@{deca\-\_\-spi.\-c}!readfromspi\-\_\-serial@{readfromspi\-\_\-serial}}
+\index{readfromspi\-\_\-serial@{readfromspi\-\_\-serial}!deca_spi.c@{deca\-\_\-spi.\-c}}
+\subsubsection[{readfromspi\-\_\-serial}]{\setlength{\rightskip}{0pt plus 5cm}int readfromspi\-\_\-serial (
+\begin{DoxyParamCaption}
+\item[{uint16}]{header\-Length, }
+\item[{const uint8 $\ast$}]{header\-Buffer, }
+\item[{uint32}]{readlength, }
+\item[{uint8 $\ast$}]{read\-Buffer}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8c_a2bba9ef938040f0842ed56371bb69160}
+
+
+ Function\-: \hyperlink{deca__device__api_8h_ab8024530a2b17ba0f3ca864c10b922b0}{readfromspi()}
+
+Low level abstract function to read from the S\-P\-I Takes two separate byte buffers for write header and read data returns the offset into read buffer where first byte of read data may be found, or returns -\/1 if there was an error \hypertarget{deca__spi_8c_aba7bf065506fc4fa01c7db8e3dc784ba}{\index{deca\-\_\-spi.\-c@{deca\-\_\-spi.\-c}!writetospi\-\_\-serial@{writetospi\-\_\-serial}}
+\index{writetospi\-\_\-serial@{writetospi\-\_\-serial}!deca_spi.c@{deca\-\_\-spi.\-c}}
+\subsubsection[{writetospi\-\_\-serial}]{\setlength{\rightskip}{0pt plus 5cm}int writetospi\-\_\-serial (
+\begin{DoxyParamCaption}
+\item[{uint16}]{header\-Length, }
+\item[{const uint8 $\ast$}]{header\-Buffer, }
+\item[{uint32}]{bodylength, }
+\item[{const uint8 $\ast$}]{body\-Buffer}
+\end{DoxyParamCaption}
+)}}\label{deca__spi_8c_aba7bf065506fc4fa01c7db8e3dc784ba}
+
+
+ Function\-: \hyperlink{deca__device__api_8h_a06c4b1c25fcbdb5dc0c92d6f89797513}{writetospi()}
+
+Low level abstract function to write to the S\-P\-I Takes two separate byte buffers for write header and write data returns 0 for success, or -\/1 for error 

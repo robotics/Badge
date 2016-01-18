@@ -1,0 +1,91 @@
+\hypertarget{syscalls_8c}{\section{src/sys/syscalls.c File Reference}
+\label{syscalls_8c}\index{src/sys/syscalls.\-c@{src/sys/syscalls.\-c}}
+}
+
+
+system call functions  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{syscalls_8c_a6a05c923dad0c1208043e9c20a58c8e5}{\#define {\bfseries E\-N\-O\-M\-E\-M}~12 /$\ast$ Not enough core $\ast$/}\label{syscalls_8c_a6a05c923dad0c1208043e9c20a58c8e5}
+
+\item 
+\hypertarget{syscalls_8c_ac54507d66b43ad12f9356257323c0018}{\#define {\bfseries E\-B\-A\-D\-F}~9 /$\ast$ Bad file number $\ast$/}\label{syscalls_8c_ac54507d66b43ad12f9356257323c0018}
+
+\item 
+\hypertarget{syscalls_8c_a2d1678d5a7cc8ce499643f3b8957def4}{\#define {\bfseries E\-I\-N\-V\-A\-L}~22 /$\ast$ Invalid argument $\ast$/}\label{syscalls_8c_a2d1678d5a7cc8ce499643f3b8957def4}
+
+\item 
+\hypertarget{syscalls_8c_acaa6390933d81e0e962c2efe9c7ef125}{\#define {\bfseries \-\_\-\-I\-F\-C\-H\-R}~0020000 /$\ast$ character special $\ast$/}\label{syscalls_8c_acaa6390933d81e0e962c2efe9c7ef125}
+
+\item 
+\hypertarget{syscalls_8c_aef3a1d1ba22c83e30b5c834dd343b2a8}{\#define {\bfseries S\-\_\-\-I\-F\-C\-H\-R}~\-\_\-\-I\-F\-C\-H\-R}\label{syscalls_8c_aef3a1d1ba22c83e30b5c834dd343b2a8}
+
+\item 
+\hypertarget{syscalls_8c_a77b4c411358331cc779a3cef8ce735f6}{\#define {\bfseries \-\_\-\-\_\-\-M\-Y\-\_\-\-P\-I\-D}~1}\label{syscalls_8c_a77b4c411358331cc779a3cef8ce735f6}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{syscalls_8c_a12624c10ffc3547260ade894f5cc2b55}{int {\bfseries \-\_\-write} (int fd, char $\ast$ptr, size\-\_\-t len)}\label{syscalls_8c_a12624c10ffc3547260ade894f5cc2b55}
+
+\item 
+\hypertarget{syscalls_8c_aae54d7b9578ba1fc171ce6f30f4c68a3}{caddr\-\_\-t {\bfseries \-\_\-sbrk} (int incr)}\label{syscalls_8c_aae54d7b9578ba1fc171ce6f30f4c68a3}
+
+\item 
+\hypertarget{syscalls_8c_abc96bd69b58b2deaddb484478d911c1b}{void {\bfseries \-\_\-exit} (int status)}\label{syscalls_8c_abc96bd69b58b2deaddb484478d911c1b}
+
+\item 
+\hypertarget{syscalls_8c_abb33077aaa12af214c61cb92e8a2d409}{clock\-\_\-t {\bfseries \-\_\-times\-\_\-r} (void $\ast$reent, struct tms $\ast$tp)}\label{syscalls_8c_abb33077aaa12af214c61cb92e8a2d409}
+
+\item 
+\hypertarget{syscalls_8c_ae976deb04cd44dd14256223b5b29c91f}{int {\bfseries \-\_\-read\-\_\-r} (int fd, char $\ast$ptr, size\-\_\-t len)}\label{syscalls_8c_ae976deb04cd44dd14256223b5b29c91f}
+
+\item 
+\hypertarget{syscalls_8c_a6b452ea036429dea5c5fbcabdb987fd4}{int {\bfseries \-\_\-close\-\_\-r} (int file)}\label{syscalls_8c_a6b452ea036429dea5c5fbcabdb987fd4}
+
+\item 
+\hypertarget{syscalls_8c_ab721860334f3415e65e270fc38f75821}{int {\bfseries \-\_\-fstat\-\_\-r} (int file, struct stat $\ast$st)}\label{syscalls_8c_ab721860334f3415e65e270fc38f75821}
+
+\item 
+\hypertarget{syscalls_8c_a374b8d0779c2d2ba6ee7f2ab21c74316}{int {\bfseries \-\_\-isatty\-\_\-r} (int file)}\label{syscalls_8c_a374b8d0779c2d2ba6ee7f2ab21c74316}
+
+\item 
+\hypertarget{syscalls_8c_a9d3a0007a22df4caccb33607db637f2f}{int {\bfseries \-\_\-getpid\-\_\-r} (void)}\label{syscalls_8c_a9d3a0007a22df4caccb33607db637f2f}
+
+\item 
+\hypertarget{syscalls_8c_ab4f56e7097454b30ed1bae29f5c0c009}{int {\bfseries \-\_\-lseek\-\_\-r} (int file, int ptr, int dir)}\label{syscalls_8c_ab4f56e7097454b30ed1bae29f5c0c009}
+
+\item 
+\hypertarget{syscalls_8c_a986fd91516adc9342a6faaad7e3c3f9b}{int {\bfseries \-\_\-kill\-\_\-r} (int pid, int sig)}\label{syscalls_8c_a986fd91516adc9342a6faaad7e3c3f9b}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{syscalls_8c_ad65a8842cc674e3ddf69355898c0ecbf}{int {\bfseries errno}}\label{syscalls_8c_ad65a8842cc674e3ddf69355898c0ecbf}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+system call functions 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+\begin{DoxyAuthor}{Author}
+Deca\-Wave 
+\end{DoxyAuthor}

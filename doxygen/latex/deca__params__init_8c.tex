@@ -1,0 +1,185 @@
+\hypertarget{deca__params__init_8c}{\section{src/decadriver/deca\-\_\-params\-\_\-init.c File Reference}
+\label{deca__params__init_8c}\index{src/decadriver/deca\-\_\-params\-\_\-init.\-c@{src/decadriver/deca\-\_\-params\-\_\-init.\-c}}
+}
+
+
+D\-W1000 configuration parameters.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-regs.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-device\-\_\-api.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}deca\-\_\-param\-\_\-types.\-h\char`\"{}}\\*
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{deca__params__init_8c_a3c97aeebfcbf626d5d01b8b521add912}{const uint8 {\bfseries chan\-\_\-idx} \mbox{[}N\-U\-M\-\_\-\-C\-H\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D\mbox{]} = \{0, 0, 1, 2, 3, 4, 0, 5\}}\label{deca__params__init_8c_a3c97aeebfcbf626d5d01b8b521add912}
+
+\item 
+const uint32 {\bfseries tx\-\_\-config} \mbox{[}N\-U\-M\-\_\-\-C\-H\mbox{]}
+\item 
+const uint8 {\bfseries pll2\-\_\-config} \mbox{[}N\-U\-M\-\_\-\-C\-H\mbox{]}\mbox{[}5\mbox{]}
+\item 
+\hypertarget{deca__params__init_8c_a818a43553162403e0beca1ecb718c9c6}{const uint8 {\bfseries pll2calcfg} = (0x60 $\vert$ 0x10)}\label{deca__params__init_8c_a818a43553162403e0beca1ecb718c9c6}
+
+\item 
+const uint8 {\bfseries rx\-\_\-config} \mbox{[}N\-U\-M\-\_\-\-B\-W\mbox{]}
+\item 
+const \hyperlink{structagc__cfg__struct}{agc\-\_\-cfg\-\_\-struct} {\bfseries agc\-\_\-config}
+\item 
+\hypertarget{deca__params__init_8c_a21a5a43002f9a02226af78d3717aea04}{const uint8 {\bfseries dwns\-S\-F\-Dlen} \mbox{[}N\-U\-M\-\_\-\-B\-R\mbox{]} = \{ 0x40, 0x10, 0x08 \}}\label{deca__params__init_8c_a21a5a43002f9a02226af78d3717aea04}
+
+\item 
+const uint16 {\bfseries sftsh} \mbox{[}N\-U\-M\-\_\-\-B\-R\mbox{]}\mbox{[}N\-U\-M\-\_\-\-S\-F\-D\mbox{]}
+\item 
+const uint16 {\bfseries dtune1} \mbox{[}N\-U\-M\-\_\-\-P\-R\-F\mbox{]}
+\item 
+const uint32 {\bfseries digital\-\_\-bb\-\_\-config} \mbox{[}N\-U\-M\-\_\-\-P\-R\-F\mbox{]}\mbox{[}N\-U\-M\-\_\-\-P\-A\-C\-S\mbox{]}
+\item 
+\hypertarget{deca__params__init_8c_a9accd227957be8667e4afb81923ae62b}{const uint16 {\bfseries lde\-\_\-replica\-Coeff} \mbox{[}P\-C\-O\-D\-E\-S\mbox{]}}\label{deca__params__init_8c_a9accd227957be8667e4afb81923ae62b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-W1000 configuration parameters. 
+
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright 2013 (c) Deca\-Wave Ltd, Dublin, Ireland.
+
+All rights reserved.
+
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{deca__params__init_8c_a8ec5815e10a440fb38d1562e74ebfe26}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!agc\-\_\-config@{agc\-\_\-config}}
+\index{agc\-\_\-config@{agc\-\_\-config}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{agc\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf agc\-\_\-cfg\-\_\-struct} agc\-\_\-config}}\label{deca__params__init_8c_a8ec5815e10a440fb38d1562e74ebfe26}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+    AGC\_TUNE2\_VAL,
+
+    \{ AGC\_TUNE1\_16M , AGC\_TUNE1\_64M \}  
+\}
+\end{DoxyCode}
+\hypertarget{deca__params__init_8c_adcce3ac88c7cc58e4a05daec98f5dd5b}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!digital\-\_\-bb\-\_\-config@{digital\-\_\-bb\-\_\-config}}
+\index{digital\-\_\-bb\-\_\-config@{digital\-\_\-bb\-\_\-config}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{digital\-\_\-bb\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}const uint32 digital\-\_\-bb\-\_\-config\mbox{[}N\-U\-M\-\_\-\-P\-R\-F\mbox{]}\mbox{[}N\-U\-M\-\_\-\-P\-A\-C\-S\mbox{]}}}\label{deca__params__init_8c_adcce3ac88c7cc58e4a05daec98f5dd5b}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \{
+        
+        \{
+            
+            0x311A002D,
+            
+            0x331A0052,
+            
+            0x351A009A,
+            
+            0x371A011D
+        \},
+        
+        \{
+            
+            0x313B006B,
+            
+            0x333B00BE,
+            
+            0x353B015E,
+            
+            0x373B0296
+        \}
+\}
+\end{DoxyCode}
+\hypertarget{deca__params__init_8c_a7688bc6153660b67559098f43cf3d295}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!dtune1@{dtune1}}
+\index{dtune1@{dtune1}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{dtune1}]{\setlength{\rightskip}{0pt plus 5cm}const uint16 dtune1\mbox{[}N\-U\-M\-\_\-\-P\-R\-F\mbox{]}}}\label{deca__params__init_8c_a7688bc6153660b67559098f43cf3d295}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+    0x0087, 
+    0x008D 
+\}
+\end{DoxyCode}
+\hypertarget{deca__params__init_8c_ac17ccbc0d2a871c6d6e7dd86f26c4974}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!pll2\-\_\-config@{pll2\-\_\-config}}
+\index{pll2\-\_\-config@{pll2\-\_\-config}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{pll2\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}const uint8 pll2\-\_\-config\mbox{[}N\-U\-M\-\_\-\-C\-H\mbox{]}\mbox{[}5\mbox{]}}}\label{deca__params__init_8c_ac17ccbc0d2a871c6d6e7dd86f26c4974}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+    \{ 0x07, 0x04, 0x00, 0x09, 0x1E\}, 
+
+    \{ 0x08, 0x05, 0x40, 0x08, 0x26\}, 
+
+    \{ 0x09, 0x10, 0x40, 0x08, 0x56\}, 
+
+    \{ 0x08, 0x05, 0x40, 0x08, 0x26\}, 
+
+    \{ 0x1D, 0x04, 0x00, 0x08, 0xBE\}, 
+
+    \{ 0x1D, 0x04, 0x00, 0x08, 0xBE\} 
+\}
+\end{DoxyCode}
+\hypertarget{deca__params__init_8c_a1711dbfcb13505b68ed461b0b55e4a6d}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!rx\-\_\-config@{rx\-\_\-config}}
+\index{rx\-\_\-config@{rx\-\_\-config}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{rx\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}const uint8 rx\-\_\-config\mbox{[}N\-U\-M\-\_\-\-B\-W\mbox{]}}}\label{deca__params__init_8c_a1711dbfcb13505b68ed461b0b55e4a6d}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+    0xD8,   
+    0xBC    
+\}
+\end{DoxyCode}
+\hypertarget{deca__params__init_8c_af5cd4f7d3eeaf7546365db5f92a93e9f}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!sftsh@{sftsh}}
+\index{sftsh@{sftsh}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{sftsh}]{\setlength{\rightskip}{0pt plus 5cm}const uint16 sftsh\mbox{[}N\-U\-M\-\_\-\-B\-R\mbox{]}\mbox{[}N\-U\-M\-\_\-\-S\-F\-D\mbox{]}}}\label{deca__params__init_8c_af5cd4f7d3eeaf7546365db5f92a93e9f}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+    
+    \{
+        (0x0a), 
+        (0x16)  
+    \},
+    
+    \{
+        (0x01), 
+        (0x06), 
+    \},
+    
+    \{
+        (0x01), 
+        (0x02), 
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{deca__params__init_8c_aade3df840c2c7fa5ec65499d43b742cc}{\index{deca\-\_\-params\-\_\-init.\-c@{deca\-\_\-params\-\_\-init.\-c}!tx\-\_\-config@{tx\-\_\-config}}
+\index{tx\-\_\-config@{tx\-\_\-config}!deca_params_init.c@{deca\-\_\-params\-\_\-init.\-c}}
+\subsubsection[{tx\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}const uint32 tx\-\_\-config\mbox{[}N\-U\-M\-\_\-\-C\-H\mbox{]}}}\label{deca__params__init_8c_aade3df840c2c7fa5ec65499d43b742cc}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+        RF\_TXCTRL\_CH1,      
+        RF\_TXCTRL\_CH2,
+        RF\_TXCTRL\_CH3,
+        RF\_TXCTRL\_CH4,
+        RF\_TXCTRL\_CH5,
+        RF\_TXCTRL\_CH7,
+\}
+\end{DoxyCode}
